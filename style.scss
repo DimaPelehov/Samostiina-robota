@@ -1,0 +1,344 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Nunito";
+}
+
+.container {
+  min-width: 320px;
+  margin: auto;
+}
+
+.fon-top-navbar {
+  background-color: #0c4b35;
+}
+
+// -----top navbar-------
+
+.top-navbar {
+  max-width: 375px;
+  width: 100%;
+  height: 60px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-navbar-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 183px;
+  height: 20px;
+  font-size: 12px;
+}
+
+.adress-and-phone {
+  display: flex;
+  gap: 20px;
+  height: 100%;
+
+  a {
+    display: block;
+    height: 100%;
+  }
+
+  .adress-and-phone-punkts {
+    width: 20px;
+  }
+}
+
+.mail {
+  background-image: url(image/Mail.svg);
+}
+
+.email {
+  display: none;
+}
+
+.phone {
+  background-image: url(image/Vector.svg);
+}
+
+.phone-number {
+  display: none;
+}
+
+.location {
+  background-image: url(image/Location.svg);
+}
+
+.location-adress {
+  display: none;
+}
+
+.language {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.language-menu {
+  list-style: none;
+  padding: 0px;
+
+  a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+  }
+
+  li {
+    position: relative;
+  }
+
+  li:hover .language-submenu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.language-submenu {
+  display: none;
+  position: absolute;
+  left: -15px;
+  list-style: none;
+  padding: 0px;
+  background-color: #0c4b35;
+  cursor: pointer;
+  width: 72px;
+
+  li {
+    padding-top: 5px;
+    width: 100%;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  a:hover {
+    background-color: white;
+    color: #0c4b35;
+  }
+}
+
+.arrow {
+  background-image: url(image/Arrow.svg);
+  width: 7px;
+  height: 4px;
+}
+// ----------------navbar------------------
+.navbar {
+  max-width: 375px;
+  height: 70px;
+  padding: 15px;
+  margin: auto;
+}
+
+.navbar-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 40px;
+
+  a {
+    display: flex;
+  }
+}
+
+.mobile-call-and-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  width: 110px;
+}
+
+.call-button {
+  background-image: url(image/Call-Button.svg);
+  background-repeat: no-repeat;
+  background-position-y: 3px;
+  width: 40px;
+  height: 100%;
+
+  a {
+    display: flex;
+    height: 100%;
+  }
+}
+
+.menu-button {
+  background-image: url(image/navbar-menu.svg);
+  background-repeat: no-repeat;
+  background-position-y: 3px;
+  height: 100%;
+  width: 30px;
+}
+
+.desktop-menu-and-call {
+  display: none;
+}
+
+// -----------Mobile S Adaptation-----------
+@media (max-width: 320px) {
+  .top-navbar-text {
+    gap: 120px;
+  }
+}
+
+// ----Desktop Adaptation-----
+
+@media (min-width: 1440px) {
+  // -------top-navbar---------
+  .top-navbar {
+    max-width: 1420px;
+  }
+
+  .top-navbar-text {
+    width: 1390px;
+    height: 25px;
+    font-family: "Poppins";
+    font-size: 14px;
+  }
+
+  .adress-and-phone {
+    gap: 10px;
+
+    .adress-and-phone-punkts {
+      width: 25px;
+      height: 25px;
+      background-size: 24px;
+      background-repeat: no-repeat;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .email {
+      display: flex;
+      margin-right: 20px;
+    }
+
+    .phone-number {
+      display: flex;
+      margin-right: 20px;
+    }
+
+    .location-adress {
+      display: flex;
+    }
+  }
+
+  .language-submenu {
+    width: 86px;
+  }
+  // -----navbar-----
+  .navbar {
+    max-width: 1420px;
+    height: 85px;
+    font-size: 16px;
+  }
+
+  .logo {
+    height: 55px;
+    img {
+      width: 120px;
+      height: 55px;
+    }
+  }
+
+  .mobile-call-and-menu {
+    display: none;
+  }
+
+  .desktop-menu-and-call {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 101px;
+  }
+
+  .desktop-navbar-menu {
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 40px;
+      padding: 0px;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+
+      &:hover {
+        color: #00730c;
+      }
+    }
+
+    li {
+      position: relative;
+
+      &:hover .navbar-submenu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .arrow {
+      background-image: url(image/arrow-black.svg);
+      background-repeat: no-repeat;
+      background-position-y: center;
+      background-position-x: right;
+      padding-right: 15px;
+    }
+
+    .navbar-submenu {
+      flex-direction: column;
+      gap: 10px;
+      // display: none;
+      position: absolute;
+      padding-top: 10px;
+      width: 70px;
+
+      li {
+        width: 100%;
+      }
+
+      a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .ns-one {
+      left: -10px;
+    }
+
+    .navbar-submenu a:hover {
+      background-color: #0c4b35;
+      color: white;
+    }
+  }
+
+  .desktop-call-button {
+    background-image: url(image/laptop-call-button.svg);
+    background-repeat: no-repeat;
+    background-position-y: 2px;
+    width: 170px;
+    height: 100%;
+  }
+}
