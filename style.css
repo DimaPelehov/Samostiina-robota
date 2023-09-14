@@ -989,6 +989,27 @@ p {
   .service-card:hover .sc-first {
     background-image: url(image/desktop-card-image1.svg);
   }
+  .service-card:hover .sc-second {
+    background-image: url(image/desk-serv-card-img2-white.svg);
+  }
+  .service-card:hover .sc-third {
+    background-image: url(image/desk-serv-card-img3-white.svg);
+  }
+  .service-card:hover .sc-fourth {
+    background-image: url(image/desk-serv-card-img4-white.svg);
+  }
+  .service-card:hover .sc-fifth {
+    background-image: url(image/desk-serv-card-img5-white.svg);
+  }
+  .service-card:hover .sc-sixth {
+    background-image: url(image/desk-serv-card-img6-white.svg);
+  }
+  .service-card:hover .sc-seventh {
+    background-image: url(image/desk-serv-card-img7-white.svg);
+  }
+  .service-card:hover .sc-eighth {
+    background-image: url(image/desk-serv-card-img8-white.svg);
+  }
   .service-card-image {
     width: 70px;
     height: 70px;
@@ -1185,6 +1206,15 @@ p {
   }
   .work-card:hover .wc-first {
     background-image: url(image/working-icon1-white.svg);
+  }
+  .work-card:hover .wc-second {
+    background-image: url(image/working-icon2-white.svg);
+  }
+  .work-card:hover .wc-third {
+    background-image: url(image/working-icon3-white.svg);
+  }
+  .work-card:hover .wc-fourth {
+    background-image: url(image/working-icon4-white.svg);
   }
   .work-card-text h3 {
     font-size: 24px;
