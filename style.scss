@@ -7,6 +7,12 @@ body {
   font-family: "Nunito";
 }
 
+// header {
+//   position: sticky;
+//   top: 0;
+//   z-index: 50;
+// }
+
 .container {
   max-width: 375px;
   margin: auto;
@@ -28,6 +34,9 @@ body {
   background-color: #0c4b35;
 }
 
+.fon-clients-say {
+  background-color: #cee6d5;
+}
 // -----top navbar-------
 
 .top-navbar {
@@ -150,7 +159,7 @@ body {
 .navbar {
   height: 70px;
   padding: 15px;
-  // margin: auto;
+  background-color: white;
 }
 
 .navbar-text {
@@ -771,6 +780,217 @@ p {
   }
 }
 
+// ------our staff -----
+.our-staff {
+  padding: 50px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.our-staff-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+  h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  button {
+    width: 167px;
+    height: 40px;
+    background-color: #00730c;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: "Nunito";
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+}
+
+.mob-our-staff-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+
+  img {
+    border-radius: 5px;
+  }
+}
+
+.staff-card {
+  position: relative;
+}
+
+.staff-name {
+  position: absolute;
+  height: 62px;
+  width: 100%;
+  background: linear-gradient(
+    (to top, rgb(0, 115, 12) 4.95%, rgba(0, 115, 12, 0) 264.79%)
+  );
+  bottom: 5px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  color: white;
+
+  h4 {
+    font-size: 18px;
+  }
+
+  h5 {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+.staff-slides {
+  display: flex;
+  gap: 12px;
+}
+
+.st-slide {
+  width: 20px;
+  height: 6px;
+  background-color: #00730c;
+  border-radius: 8px;
+}
+
+.center-sl {
+  width: 50px;
+}
+
+.desk-our-staff-cards {
+  display: none;
+}
+
+// ---clients say---
+.clients-say {
+  height: 585px;
+  padding: 50px 15px 0px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    margin-bottom: 40px;
+  }
+}
+
+.clients-say-cards {
+  width: 100%;
+  background-color: white;
+}
+
+.cs-card {
+  padding: 20px;
+  box-shadow: 2px 11px 30px 0px rgb(243, 238, 238);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.cs-card-img {
+  display: flex;
+}
+
+.cs-text {
+  padding-top: 13px;
+  background-image: url(image/client-say-card-icon.svg);
+  background-repeat: no-repeat;
+  background-size: 30px;
+
+  p {
+    text-align: left;
+    line-height: 22px;
+    margin-bottom: 15px;
+  }
+}
+
+.cs-text-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cs-name {
+  text-align: left;
+
+  h4 {
+    font-size: 16px;
+  }
+
+  h5 {
+    font-size: 12px;
+    font-weight: 400;
+    color: #676767;
+  }
+}
+
+.cs-stars {
+  display: flex;
+  // gap: 10px;
+  align-items: center;
+  position: relative;
+  width: 80px;
+  height: 20px;
+  margin: 9px 0 9px 0;
+  background-image: url(image/green-star.svg);
+  background-repeat: repeat-x;
+}
+
+.raiting-star {
+  appearance: none;
+  -webkit-appereance: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.raiting-star:checked,
+.raiting-star:hover {
+  background-image: url(image/yellow-star.svg);
+  background-size: 20px;
+  background-repeat: repeat-x;
+  background-position-y: 0.45px;
+}
+
+.one-rs {
+  width: 20px;
+  z-index: 4;
+}
+.two-rs {
+  width: 40px;
+  z-index: 3;
+}
+.three-rs {
+  width: 60px;
+  z-index: 2;
+}
+.fourth-rs {
+  width: 80px;
+  z-index: 1;
+}
+
 // ----------------Mobile S Adaptation---------------------
 @media (max-width: 320px) {
   .top-navbar-text {
@@ -1324,6 +1544,7 @@ p {
   }
 
   .work-card {
+    flex: 1 1 calc(25% - 30px);
     padding: 50px 29px 70px;
     gap: 35px;
     background-image: url(image/desktop-working-card-backgr.svg);
@@ -1410,5 +1631,187 @@ p {
     background-image: url(image/desktop-ourbest-button.png);
     background-position-y: -7px;
     background-position-x: -9px;
+  }
+
+  // --our staff---
+  .our-staff {
+    padding: 100px 20px;
+    gap: 50px;
+  }
+
+  .our-staff-text {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+    h2 {
+      width: 100%;
+      text-align: left;
+      font-size: 45px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      width: 70%;
+      margin-right: 224px;
+      text-align: left;
+    }
+
+    button {
+      margin-top: 0px;
+      width: 190px;
+      height: 50px;
+      font-size: 18px;
+    }
+  }
+
+  .mob-our-staff-cards {
+    display: none;
+  }
+
+  .staff-slides {
+    display: none;
+  }
+
+  .desk-our-staff-cards {
+    display: flex;
+    gap: 30px;
+
+    img {
+      border-radius: 5px;
+    }
+  }
+
+  .desk-st-card {
+    flex: 1 1 calc(25% - 30px);
+    position: relative;
+    height: 408px;
+    display: flex;
+  }
+
+  // .desk-st-card:hover {
+  //   .desk-staff-name {
+  //     display: none;
+  //   }
+
+  //   &:after {
+  //     content: "";
+  //     display: flex;
+  //     width: 100%;
+  //     height: 100%;
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     background: linear-gradient(
+  //       (to top, rgb(0, 115, 12) 4.95%, rgba(0, 115, 12, 0) 264.79%)
+  //     );
+  //   }
+  // }
+
+  .desk-staff-name {
+    position: absolute;
+    height: 90px;
+    width: 100%;
+    background: linear-gradient(
+      (to top, rgb(0, 115, 12) 4.95%, rgba(0, 115, 12, 0) 264.79%)
+    );
+    bottom: 0;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    color: white;
+
+    h4 {
+      font-size: 24px;
+    }
+
+    h5 {
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+
+  .full-info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      (to top, rgb(0, 115, 12) 4.95%, rgba(0, 115, 12, 0) 264.79%)
+    );
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+
+  .full-info-content {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .fic-name {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 1px;
+    align-items: center;
+
+    h4 {
+      font-size: 24px;
+    }
+
+    h5 {
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+
+  .fic-icons {
+    display: flex;
+    gap: 25px;
+  }
+
+  .fic-icon {
+    width: 30px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    a {
+      display: block;
+      height: 30px;
+    }
+  }
+
+  .fic-first {
+    background-image: url(image/icon-google-white.svg);
+  }
+  .fic-second {
+    background-image: url(image/icon-facebook-white.svg);
+  }
+  .fic-third {
+    background-image: url(image/icon-twitter-white.svg);
+    background-size: 25px;
+  }
+  .fic-fourth {
+    background-image: url(image/icon-pinterest-white.svg);
+  }
+  .fic-fifth {
+    background-image: url(image/icon-linkedin-white.svg);
+    background-size: 25px;
+  }
+
+  .desk-st-card:hover {
+    .full-info {
+      display: flex;
+    }
+
+    .desk-staff-name {
+      display: none;
+    }
   }
 }
