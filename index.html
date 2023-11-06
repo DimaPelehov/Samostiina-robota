@@ -139,7 +139,7 @@
               </div>
               <div class="hero-content-heading">
                 Perfect Landscape
-                <p class="color-green">Solution</p>
+                <p class="color-green hch-p">Solution</p>
                 <p class="hero-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Veniam dignissimos maiores voluptatem optio aperiam sequi
@@ -673,14 +673,20 @@
           <!-- clients-say -->
           <div class="clients-say">
             <h2>What <span class="color-green">Clients Saying</span></h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the text industry's standard dummy
-              text ever since the 1500s, when an unknown of type and scrambled
-              it to make a type specimen book.
-            </p>
+            <div class="client-say-slider">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the text industry's standard
+                dummy text ever since the 1500s, when an unknown of type and
+                scrambled it to make a type specimen book.
+              </p>
+              <div class="cs-arrows">
+                <div class="cs-arrow csa-left"></div>
+                <div class="cs-arrow csa-right"></div>
+              </div>
+            </div>
             <div class="clients-say-cards">
-              <div class="cs-card">
+              <div class="cs-card css-one">
                 <div class="cs-card-img">
                   <img
                     src="image/mob-client-say-card1.png"
@@ -701,7 +707,18 @@
                       <h4>Jane Smith</h4>
                       <h5>Manager</h5>
                     </div>
-                    <div class="cs-stars">
+                    <div class="raiting">
+                      <input type="radio" name="raiting-one " id="1" />
+                      <label for="1"></label>
+                      <input type="radio" name="raiting-one " id="2" />
+                      <label for="2"></label>
+                      <input type="radio" name="raiting-one " id="3" />
+                      <label for="3"></label>
+                      <input type="radio" name="raiting-one " id="4" />
+                      <label for="4"></label>
+                    </div>
+                    <!-- Альтернатива (замість div raiting) -->
+                    <!-- <div class="cs-stars">
                       <input
                         class="raiting-star one-rs"
                         type="radio"
@@ -730,7 +747,72 @@
                         value="4"
                         aria-label="Прекрасно"
                       />
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+              <div class="cs-card css-two">
+                <div class="cs-card-img">
+                  <img
+                    src="image/desk-client-say-card2.png"
+                    width="193px"
+                    height="276px"
+                    alt="good client"
+                  />
+                </div>
+                <div class="cs-text">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printig and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took text of type and scrambled it to make.
+                  </p>
+                  <div class="cs-text-row">
+                    <div class="cs-name">
+                      <h4>Jane Smith</h4>
+                      <h5>Manager</h5>
                     </div>
+                    <div class="raiting">
+                      <input type="radio" name="raiting-two " id="5" />
+                      <label for="5"></label>
+                      <input type="radio" name="raiting-two " id="6" />
+                      <label for="6"></label>
+                      <input type="radio" name="raiting-two " id="7" />
+                      <label for="7"></label>
+                      <input type="radio" name="raiting-two " id="8" />
+                      <label for="8"></label>
+                    </div>
+                    <!-- Альтернатива (замість div raiting) -->
+                    <!-- <div class="cs-stars">
+                      <input
+                        class="raiting-star one-rs"
+                        type="radio"
+                        name="raiting"
+                        value="1"
+                        aria-label="Жахливо"
+                      />
+                      <input
+                        class="raiting-star two-rs"
+                        type="radio"
+                        name="raiting"
+                        value="2"
+                        aria-label="Задовільно"
+                      />
+                      <input
+                        class="raiting-star three-rs"
+                        type="radio"
+                        name="raiting"
+                        value="3"
+                        aria-label="Добре"
+                      />
+                      <input
+                        class="raiting-star fourth-rs"
+                        type="radio"
+                        name="raiting"
+                        value="4"
+                        aria-label="Прекрасно"
+                      />
+                    </div> -->
                   </div>
                 </div>
               </div>
@@ -738,6 +820,122 @@
           </div>
         </div>
       </div>
+      <div class="container">
+        <!-- frequently -->
+        <div class="frequently">
+          <div class="frequently-content">
+            <div class="freq-text">
+              <h2>
+                Frequently <br /><span class="color-green"
+                  >Asked Questions</span
+                >
+              </h2>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown of type and scrambled
+                it to make a type specimen book.
+              </p>
+            </div>
+            <div class="freq-questions-answers">
+              <div class="freq-accordion">
+                <div class="fra-title" data-tab="tab-1">
+                  <h3>1. Can i consult about caring for Plants?</h3>
+                  <span></span>
+                </div>
+                <div class="fra-content" id="tab-1">
+                  Lorem ipsum dolor sit amet, elit & consectetur adipiscing
+                  elit. Integer adipiscing erat eget risus sollicitudin
+                  pellentes queet non erat. Maecenas nibh dolor, malesuada et
+                  bibendum a, sagittis accumsan ipsum. Pellentesque ultrices
+                  ultrices sapien, nec tincidunt nunc posuere ut. Lorem ipsum
+                  dolor sit amet, consectetur adipiscing elit. Name ultrices
+                  scelerisque tristique dolor vitae tincidunt. Aenean quis massa
+                  uada mi elementum elementum. Nec sapien convallis vulputate
+                  rhoncus vel dui.
+                </div>
+              </div>
+              <div class="freq-accordion">
+                <div class="fra-title" data-tab="tab-2">
+                  <h3>2. How many types of plant are in the ...?</h3>
+                  <span></span>
+                </div>
+                <div class="fra-content" id="tab-2">
+                  Lorem ipsum dolor sit amet, elit & consectetur adipiscing
+                  elit. Integer adipiscing erat eget risus sollicitudin
+                  pellentes queet non erat. Maecenas nibh dolor, malesuada et
+                  bibendum a, sagittis accumsan ipsum. Pellentesque ultrices
+                  ultrices sapien, nec tincidunt nunc posuere ut. Lorem ipsum
+                  dolor sit amet, consectetur adipiscing elit. Name ultrices
+                  scelerisque tristique dolor vitae tincidunt. Aenean quis massa
+                  uada mi elementum elementum. Nec sapien convallis vulputate
+                  rhoncus vel dui.
+                </div>
+              </div>
+              <div class="freq-accordion">
+                <div class="fra-title" data-tab="tab-3">
+                  <h3>3. What are the uses of plants in daily life?</h3>
+                  <span></span>
+                </div>
+                <div class="fra-content" id="tab-3">
+                  Lorem ipsum dolor sit amet, elit & consectetur adipiscing
+                  elit. Integer adipiscing erat eget risus sollicitudin
+                  pellentes queet non erat. Maecenas nibh dolor, malesuada et
+                  bibendum a, sagittis accumsan ipsum. Pellentesque ultrices
+                  ultrices sapien, nec tincidunt nunc posuere ut. Lorem ipsum
+                  dolor sit amet, consectetur adipiscing elit. Name ultrices
+                  scelerisque tristique dolor vitae tincidunt. Aenean quis massa
+                  uada mi elementum elementum. Nec sapien convallis vulputate
+                  rhoncus vel dui.
+                </div>
+              </div>
+              <div class="freq-accordion">
+                <div class="fra-title" data-tab="tab-4">
+                  <h3>4. Can i consult about caring for Plants?</h3>
+                  <span></span>
+                </div>
+                <div class="fra-content" id="tab-4">
+                  Lorem ipsum dolor sit amet, elit & consectetur adipiscing
+                  elit. Integer adipiscing erat eget risus sollicitudin
+                  pellentes queet non erat. Maecenas nibh dolor, malesuada et
+                  bibendum a, sagittis accumsan ipsum. Pellentesque ultrices
+                  ultrices sapien, nec tincidunt nunc posuere ut. Lorem ipsum
+                  dolor sit amet, consectetur adipiscing elit. Name ultrices
+                  scelerisque tristique dolor vitae tincidunt. Aenean quis massa
+                  uada mi elementum elementum. Nec sapien convallis vulputate
+                  rhoncus vel dui.
+                </div>
+              </div>
+              <div class="freq-accordion">
+                <div class="fra-title" data-tab="tab-5">
+                  <h3>5. What Information should i provide for...?</h3>
+                  <span></span>
+                </div>
+                <div class="fra-content" id="tab-5">
+                  Lorem ipsum dolor sit amet, elit & consectetur adipiscing
+                  elit. Integer adipiscing erat eget risus sollicitudin
+                  pellentes queet non erat. Maecenas nibh dolor, malesuada et
+                  bibendum a, sagittis accumsan ipsum. Pellentesque ultrices
+                  ultrices sapien, nec tincidunt nunc posuere ut. Lorem ipsum
+                  dolor sit amet, consectetur adipiscing elit. Name ultrices
+                  scelerisque tristique dolor vitae tincidunt. Aenean quis massa
+                  uada mi elementum elementum. Nec sapien convallis vulputate
+                  rhoncus vel dui.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="frequently-image">
+            <img
+              src="image/frequently-img.png"
+              width="507px"
+              height="679px"
+              alt="cartoon man"
+            />
+          </div>
+        </div>
+      </div>
     </main>
+    <script src="app.js"></script>
   </body>
 </html>
