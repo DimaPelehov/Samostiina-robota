@@ -851,7 +851,7 @@ p {
   margin-bottom: 15px;
 }
 
-.client-say-slider {
+.client-say-info {
   margin-bottom: 40px;
 }
 
@@ -864,20 +864,24 @@ p {
   background-color: white;
 }
 
+.slick-initialized .slick-slide {
+  display: flex;
+}
+
 .cs-card {
   padding: 20px;
-  box-shadow: 2px 11px 30px 0px rgb(243, 238, 238);
+  box-shadow: -8px -54px 20px 2px rgb(243, 238, 238);
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-.css-two {
-  display: none;
-}
-
 .cs-card-img {
   display: flex;
+}
+.cs-card-img img {
+  width: 135px;
+  height: 183px;
 }
 
 .cs-text {
@@ -1384,6 +1388,152 @@ p {
 
 .desk-foot-final {
   display: none;
+}
+
+.main-menu-close-btn {
+  background-image: url(image/main-menu-close-btn.svg);
+  background-repeat: no-repeat;
+  background-position-y: 3px;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+}
+
+.main-menu-content {
+  padding: 25px 15px 84px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.main-menu-cont-item {
+  border-bottom: 1px solid grey;
+  padding-bottom: 8px;
+}
+
+.main-men-accordion {
+  display: flex;
+  flex-direction: column;
+  width: 143px;
+}
+
+.mma-title {
+  display: flex;
+  gap: 8px;
+  opacity: 0.7;
+  align-items: center;
+}
+.mma-title:hover {
+  opacity: 1;
+}
+.mma-title h5 {
+  color: #fff;
+  font-size: 16px;
+}
+.mma-title span {
+  width: 12px;
+  height: 12px;
+  background-image: url(image/Arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 9px;
+  transition: transform 0.5s ease-out;
+  transform: rotate(0);
+}
+
+.mma-title.press {
+  opacity: 1;
+}
+.mma-title.press span {
+  transform: rotate(180deg);
+}
+
+.mma-column {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  box-sizing: content-box;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out, opacity 0.1s ease-out 0.5s, visibility 0.1s ease-out 0.5s;
+}
+
+.mma-column.press {
+  visibility: visible;
+  padding-top: 15px;
+  opacity: 1;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out, opacity 0.1s ease-out 0.1s, visibility 0.1s ease-out 0.1s;
+}
+
+.mma-column-item {
+  display: flex;
+}
+.mma-column-item a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.7;
+  display: flex;
+}
+.mma-column-item a:hover {
+  opacity: 1;
+}
+
+.main-menu-foot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 23px;
+  padding: 0px 15px 20px;
+}
+
+.mmf-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.mmf-soc-icon {
+  width: 20px;
+  height: 20px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.mmf-soc-icon a {
+  display: block;
+  height: 20px;
+}
+
+.mmf-facebook {
+  background-image: url(image/icon-facebook-white.svg);
+}
+
+.mmf-linkedin {
+  background-image: url(image/icon-linkedin-white.svg);
+  background-size: 15px;
+}
+
+.mmf-google {
+  background-image: url(image/icon-google-white.svg);
+}
+
+.mmf-twitter {
+  background-image: url(image/icon-twitter-white.svg);
+}
+
+.mmf-final {
+  text-align: center;
+  color: white;
+  padding: 0px 40px;
+}
+.mmf-final h6 {
+  font-size: 10px;
+  font-weight: 400;
 }
 
 @media (max-width: 320px) {
@@ -2047,60 +2197,74 @@ p {
   .clients-say {
     padding: 100px 20px 0px 20px;
     text-align: left;
-    margin-bottom: 157px;
+    margin-bottom: 170px;
   }
   .clients-say h2 {
     font-size: 45px;
     margin-bottom: 30px;
   }
-  .client-say-slider {
+  .client-say-info {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
   }
-  .client-say-slider p {
+  .client-say-info p {
     width: 956px;
   }
-  .cs-arrows {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+  .clients-say-cards {
+    background-color: transparent;
   }
-  .cs-arrow {
+  .slick-list {
+    margin: 0px -15px;
+  }
+  .slick-arrow {
+    top: -64px;
     width: 50px;
     height: 50px;
     border: 1px solid #00730c;
     border-radius: 5px;
+    background-color: transparent;
+  }
+  .slick-arrow::before {
+    display: none;
+  }
+  .slick-prev,
+  .slick-prev:focus {
+    right: 93px;
+    left: inherit;
     background-position: center;
     background-repeat: no-repeat;
-    cursor: pointer;
-  }
-  .csa-left {
     background-image: url(image/client-say-arrow-left-green.svg);
   }
-  .csa-left:hover {
-    background-color: #00730c;
+  .slick-prev:hover,
+  .slick-prev:focus:hover {
     background-image: url(image/client-say-arrow-left.svg);
+    background-color: #00730c;
+    background-position: center;
+    background-repeat: no-repeat;
   }
-  .csa-right {
+  .slick-next,
+  .slick-next:focus {
+    right: 0px;
+    background-position: center;
+    background-repeat: no-repeat;
     background-image: url(image/client-say-arrow-right-green.svg);
   }
-  .csa-right:hover {
-    background-color: #00730c;
+  .slick-next:hover,
+  .slick-next:focus:hover {
     background-image: url(image/client-say-arrow-right.svg);
-  }
-  .clients-say-cards {
-    display: flex;
-    gap: 30px;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: #00730c;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   .cs-card {
-    flex: 1 1 calc(50% - 30px);
     background-color: white;
     flex-direction: row;
     height: 341px;
     padding: 25px;
     gap: 35px;
+    margin: 15px;
+    box-shadow: -1px 6px 18px 6px rgb(243, 238, 238);
   }
   .cs-card-img {
     display: flex;
@@ -2109,9 +2273,6 @@ p {
   .cs-card-img img {
     height: 276px;
     width: 193px;
-  }
-  .css-two {
-    display: flex;
   }
   .cs-text {
     display: flex;

@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Samost-Figma</title>
+    <title>HomePage02</title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -673,27 +675,23 @@
           <!-- clients-say -->
           <div class="clients-say">
             <h2>What <span class="color-green">Clients Saying</span></h2>
-            <div class="client-say-slider">
+            <div class="client-say-info">
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the text industry's standard
                 dummy text ever since the 1500s, when an unknown of type and
                 scrambled it to make a type specimen book.
               </p>
-              <div class="cs-arrows">
+              <!-- <div class="cs-arrows">
                 <div class="cs-arrow csa-left"></div>
                 <div class="cs-arrow csa-right"></div>
-              </div>
+              </div> -->
             </div>
             <div class="clients-say-cards">
-              <div class="cs-card css-one">
+              <!-- 1 card -->
+              <div class="cs-card">
                 <div class="cs-card-img">
-                  <img
-                    src="image/mob-client-say-card1.png"
-                    width="135px"
-                    height="183px"
-                    alt="good client"
-                  />
+                  <img src="image/mob-client-say-card1.png" alt="good client" />
                 </div>
                 <div class="cs-text">
                   <p>
@@ -751,12 +749,11 @@
                   </div>
                 </div>
               </div>
-              <div class="cs-card css-two">
+              <!-- 2 card -->
+              <div class="cs-card">
                 <div class="cs-card-img">
                   <img
                     src="image/desk-client-say-card2.png"
-                    width="193px"
-                    height="276px"
                     alt="good client"
                   />
                 </div>
@@ -813,6 +810,66 @@
                         aria-label="Прекрасно"
                       />
                     </div> -->
+                  </div>
+                </div>
+              </div>
+              <!-- 3 card -->
+              <div class="cs-card">
+                <div class="cs-card-img">
+                  <img src="image/mob-client-say-card1.png" alt="good client" />
+                </div>
+                <div class="cs-text">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printig and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took text of type and scrambled it to make.
+                  </p>
+                  <div class="cs-text-row">
+                    <div class="cs-name">
+                      <h4>Boby Smith</h4>
+                      <h5>Manager</h5>
+                    </div>
+                    <div class="raiting">
+                      <input type="radio" name="raiting-three " id="9" />
+                      <label for="9"></label>
+                      <input type="radio" name="raiting-three  " id="10" />
+                      <label for="10"></label>
+                      <input type="radio" name="raiting-three  " id="11" />
+                      <label for="11"></label>
+                      <input type="radio" name="raiting-three  " id="12" />
+                      <label for="12"></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 4 card -->
+              <div class="cs-card">
+                <div class="cs-card-img">
+                  <img src="image/mob-client-say-card1.png" alt="good client" />
+                </div>
+                <div class="cs-text">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printig and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took text of type and scrambled it to make.
+                  </p>
+                  <div class="cs-text-row">
+                    <div class="cs-name">
+                      <h4>Dany Smith</h4>
+                      <h5>Manager</h5>
+                    </div>
+                    <div class="raiting">
+                      <input type="radio" name="raiting-fourth " id="13" />
+                      <label for="13"></label>
+                      <input type="radio" name="raiting-fourth " id="14" />
+                      <label for="14"></label>
+                      <input type="radio" name="raiting-fourth " id="15" />
+                      <label for="15"></label>
+                      <input type="radio" name="raiting-fourth " id="16" />
+                      <label for="16"></label>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1186,6 +1243,16 @@
         </div>
       </div>
     </footer>
-    <script src="app.js"></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <!--https: додаємо самі, спочатку його не було  -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="HomePage02_app.js"></script>
   </body>
 </html>

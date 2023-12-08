@@ -39,3 +39,20 @@ accordionTitles.forEach((item) =>
     }
   })
 );
+
+// clients-say slider
+$(".clients-say-cards").slick({
+  slidesToShow: 2,
+  slidesToScroll: 2,
+  arrows: true,
+  responsive: [
+    {
+      breakpoint: 1440,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+      },
+    },
+  ],
+});

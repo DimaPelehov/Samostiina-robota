@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+$nunito: "Nunito";
+$poppins: "Poppins";
+
+body {
+  font-family: $nunito;
+}
+
+.container {
+  //   max-width: 375px;
+  margin: auto;
+}
+
+.fon-navbar {
+  background-color: #feb967;
+}
+
+// top-navbar
+.top-navbar {
+  padding: 39px 15px 25px;
+  border-radius: 0px 0px 20px 20px;
+  background-color: white;
+  justify-content: space-between;
+
+  a {
+    display: flex;
+    height: 100%;
+  }
+}
+
+.tn-call-btn {
+  background-image: url(image/laptop-call-button.svg);
+  width: 118px;
+  background-size: 118px 40px;
+  background-repeat: no-repeat;
+}
+
+.tn-menu-btn {
+  width: 30px;
+  background-image: url(image/navbar-menu.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
