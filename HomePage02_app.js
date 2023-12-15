@@ -56,3 +56,24 @@ $(".clients-say-cards").slick({
     },
   ],
 });
+
+// our-insights slider
+let swiper = new Swiper(".swiper", {
+  direction: "horizontal",
+  loop: true,
+  freeMode: true,
+  spaceBetween: 5,
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  breakpoints: {
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+    },
+  },
+});

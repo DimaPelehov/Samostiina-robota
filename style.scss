@@ -1217,19 +1217,126 @@ p {
   }
 }
 
+// our-insights slider
+
+.swiper {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.swiper-wrapper {
+  box-sizing: content-box;
+}
+
+.oic-pagination {
+  display: none;
+}
+
 .our-insights-card {
-  // display: flex;
-  // flex-direction: column;
+  display: flex;
+  flex-direction: column;
   border-radius: 5px;
-  box-shadow: 2px 11px 30px rgba(51, 51, 51, 0.08);
+  height: auto;
+  box-shadow: 40px -19px 70px 30px rgba(51, 51, 51, 0.08);
+}
+
+.oic-white-fon {
   background-image: url(image/our-insights-card-bg.png);
   background-repeat: no-repeat;
   background-position-x: right;
 }
 
-.oi-card-content {
-  display: flex;
-  flex-direction: column;
+.oic-picture1-fon {
+  background: url(image/our-insights-card-desktop.png) lightgray 50% / cover
+    no-repeat;
+  justify-content: space-between;
+  position: relative;
+
+  .oi-tag {
+    margin-bottom: 80px;
+  }
+
+  .oi-text {
+    h3,
+    p {
+      color: white;
+    }
+  }
+
+  .oi-row {
+    h4 {
+      color: white;
+    }
+  }
+
+  .oi-admin {
+    h6 {
+      color: white;
+    }
+  }
+
+  .oi-admin-icon {
+    background-image: url(image/our-insights-white-admin.svg);
+  }
+}
+
+.oic-picture1-fon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  border-radius: 5px;
+}
+
+.oic-picture2-fon {
+  background: url(image/our-insights-card-desktop2.png) lightgray 50% / cover
+    no-repeat;
+  justify-content: space-between;
+  position: relative;
+
+  .oi-tag {
+    margin-bottom: 80px;
+  }
+
+  .oi-text {
+    h3,
+    p {
+      color: white;
+    }
+  }
+
+  .oi-row {
+    h4 {
+      color: white;
+    }
+  }
+
+  .oi-admin {
+    h6 {
+      color: white;
+    }
+  }
+
+  .oi-admin-icon {
+    background-image: url(image/our-insights-white-admin.svg);
+  }
+}
+
+.oic-picture2-fon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  border-radius: 5px;
 }
 
 .oi-card-tag-and-text {
@@ -1293,11 +1400,7 @@ p {
   background-image: url(image/our-insights-green-admin.svg);
 }
 
-.oic-gray-fon {
-  display: none;
-}
-
-.our-insights-slider {
+.our-insights-dashes {
   display: none;
 }
 
@@ -2757,37 +2860,33 @@ p {
     }
   }
 
-  .our-insights-cards {
-    display: flex;
-    gap: 30px;
-    margin-bottom: 10px;
+  // our-insights slider
+  .swiper {
+    padding-bottom: 60px;
+  }
+
+  .oic-white-fon {
+    background-size: 180px;
+    background-position-y: -10px;
   }
 
   .our-insights-card {
-    flex: 1 1 calc(33% - 30px);
-    border-radius: 10px;
-    background-size: 180px;
-    position: relative;
-    height: 610px;
-  }
-
-  .oi-card-content {
-    position: absolute;
+    box-shadow: 87px 78px 60px -53px rgba(51, 51, 51, 0.08);
   }
 
   .oi-card-tag-and-text {
-    padding: 100px 30px 25px;
+    padding: 100px 30px 70px;
   }
 
   .oi-tag {
-    width: 123px;
+    width: 139px;
     height: 35px;
     line-height: 35px;
-    margin-bottom: 30px;
   }
 
   .oi-text {
     gap: 30px;
+    text-align: justify;
 
     h3 {
       font-size: 24px;
@@ -2796,88 +2895,53 @@ p {
   }
 
   .oi-row {
-    margin: 0px;
-    padding: 30px 40px;
+    margin: 0;
+    padding: 30px 43px;
 
     h4 {
-      font-family: "Poppins";
       font-size: 16px;
       text-decoration: underline;
       text-transform: uppercase;
     }
-  }
 
-  .oi-admin {
-    border-bottom: 1px solid white;
-    align-items: center;
     h6 {
       font-size: 18px;
     }
   }
 
-  .oic-gray-fon {
-    display: flex;
-    padding: 0;
+  .oi-admin {
+    align-items: center;
+    border-bottom: 1px solid white;
+  }
 
-    img {
-      border-radius: 10px;
-      // width: 100%;
-      // height: 100%;
-      // можна зробити так, а не overflow:hidden
-    }
-
-    .oi-card-content {
-      border-radius: 10px;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .oi-card-tag-and-text {
-      padding-bottom: 75px;
-    }
-
+  .oic-picture1-fon {
     .oi-tag {
-      margin-bottom: 98px;
-    }
-
-    .oi-text {
-      h3,
-      p {
-        color: white;
-      }
-    }
-
-    .oi-row {
-      h4,
-      h6 {
-        color: white;
-      }
-    }
-
-    .oi-admin-icon {
-      background-image: url(image/our-insights-white-admin.svg);
+      margin-bottom: 105px;
     }
   }
 
-  .oi-card-img {
-    overflow: hidden;
-    // в html у малюнків стоїть все по 100%, але воно обрізається розмірами карточки (610рх)
+  .oic-picture2-fon {
+    .oi-tag {
+      margin-bottom: 105px;
+    }
   }
 
-  .our-insights-slider {
+  .oic-pagination {
     display: flex;
-    gap: 30px;
     justify-content: center;
+    gap: 30px;
   }
 
-  .oi-slider-item {
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: var(--swiper-pagination-bottom, 0px);
+  }
+
+  .swiper-pagination-bullet {
+    background-color: #00730c;
+    border-radius: 0;
     width: 50px;
     height: 7px;
-    background-color: #fbeee7;
-    cursor: pointer;
-
-    &:nth-child(3) {
-      background-color: #00730c;
-    }
   }
 
   // company logos
