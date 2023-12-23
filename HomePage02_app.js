@@ -58,7 +58,7 @@ $(".clients-say-cards").slick({
 });
 
 // our-insights slider
-let swiper = new Swiper(".swiper", {
+let swiper = new Swiper(".our-insights-swipe", {
   direction: "horizontal",
   loop: true,
   freeMode: true,
@@ -76,4 +76,13 @@ let swiper = new Swiper(".swiper", {
       slidesPerGroup: 3,
     },
   },
+});
+
+// company-logos slider
+let swiper2 = new Swiper(".mob-company-logos", {
+  slidesPerView: 2,
+  slidesPerGroup: 2,
+  loop: true,
+  watchOverflow: true,
+  spaceBetween: 30,
 });

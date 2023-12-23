@@ -1087,14 +1087,10 @@ p {
   font-size: 28px;
 }
 
-.swiper {
+.our-insights-swipe {
   display: flex;
   width: 100%;
   height: auto;
-}
-
-.swiper-wrapper {
-  box-sizing: content-box;
 }
 
 .oic-pagination {
@@ -1241,17 +1237,21 @@ p {
   background-image: url(image/our-insights-green-admin.svg);
 }
 
-.our-insights-dashes {
-  display: none;
-}
-
 .mob-company-logos {
   display: flex;
   padding: 0px 30px 50px;
-  justify-content: space-between;
 }
-.mob-company-logos img {
+
+.logo-card {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-card img {
   filter: grayscale(100%);
+  max-width: 100%;
+  height: 100%;
 }
 
 .desk-company-logos {
@@ -2450,7 +2450,7 @@ p {
   .our-insights-text h2 {
     font-size: 45px;
   }
-  .swiper {
+  .our-insights-swipe {
     padding-bottom: 60px;
   }
   .oic-white-fon {

@@ -1219,15 +1219,15 @@ p {
 
 // our-insights slider
 
-.swiper {
+.our-insights-swipe {
   display: flex;
   width: 100%;
   height: auto;
 }
 
-.swiper-wrapper {
-  box-sizing: content-box;
-}
+// .swiper-wrapper {
+//   box-sizing: content-box;
+// }
 
 .oic-pagination {
   display: none;
@@ -1400,18 +1400,22 @@ p {
   background-image: url(image/our-insights-green-admin.svg);
 }
 
-.our-insights-dashes {
-  display: none;
-}
-
 // company logos
 .mob-company-logos {
   display: flex;
   padding: 0px 30px 50px;
-  justify-content: space-between;
+}
+
+.logo-card {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   img {
     filter: grayscale(100%);
+    max-width: 100%;
+    height: 100%;
   }
 }
 
@@ -2861,7 +2865,7 @@ p {
   }
 
   // our-insights slider
-  .swiper {
+  .our-insights-swipe {
     padding-bottom: 60px;
   }
 
