@@ -1,9 +1,9 @@
-let accordionTitles = document.querySelectorAll(".mma-title");
-console.log(accordionTitles);
-let accordionContents = document.querySelectorAll(".mma-column");
-console.log(accordionContents);
+let menuAcordionTitles = document.querySelectorAll(".mma-title");
+// console.log(menuAcordionTitles);
+let menuAccordionContents = document.querySelectorAll(".mma-column");
+// console.log(menuAccordionContents);
 
-accordionTitles.forEach((item) =>
+menuAcordionTitles.forEach((item) =>
   item.addEventListener("click", () => {
     let pressContent = document.querySelector("#" + item.dataset.tab);
 
@@ -12,12 +12,14 @@ accordionTitles.forEach((item) =>
       item.classList.remove("press");
       pressContent.style.maxHeight = 0;
     } else {
-      accordionContents.forEach((element) => {
+      menuAccordionContents.forEach((element) => {
         element.classList.remove("press");
         element.style.maxHeight = 0;
       });
 
-      accordionTitles.forEach((element) => element.classList.remove("press"));
+      menuAcordionTitles.forEach((element) =>
+        element.classList.remove("press")
+      );
 
       item.classList.add("press");
       pressContent.classList.add("press");

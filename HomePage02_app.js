@@ -1,8 +1,18 @@
+// відкривання-закривання мобільного меню
+let navbarMenuBtn = document.querySelector(".menu-button");
+// console.log(navbarMenuBtn);
+let sidebarMenu = document.querySelector(".mobile-menu");
+// console.log(sidebarMenu);
+
+navbarMenuBtn.addEventListener("click", function () {
+  sidebarMenu.classList.toggle("active");
+});
+
 //   frequently accordion
 let accordionTitles = document.querySelectorAll(".fra-title");
-console.log(accordionTitles);
+// console.log(accordionTitles);
 let accordionContents = document.querySelectorAll(".fra-content");
-console.log(accordionContents);
+// console.log(accordionContents);
 
 accordionTitles.forEach((item) =>
   item.addEventListener("click", () => {
@@ -40,6 +50,12 @@ accordionTitles.forEach((item) =>
   })
 );
 
+// our-staff slider
+$(".mob-our-staff-cards").slick({
+  dots: true,
+  arrows: false,
+});
+
 // clients-say slider
 $(".clients-say-cards").slick({
   slidesToShow: 2,
@@ -47,7 +63,7 @@ $(".clients-say-cards").slick({
   arrows: true,
   responsive: [
     {
-      breakpoint: 1440,
+      breakpoint: 1200,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -70,7 +86,7 @@ let swiper = new Swiper(".our-insights-swipe", {
   },
 
   breakpoints: {
-    1440: {
+    1200: {
       slidesPerView: 3,
       spaceBetween: 30,
       slidesPerGroup: 3,

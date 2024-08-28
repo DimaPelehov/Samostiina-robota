@@ -123,6 +123,7 @@ footer {
   background-color: #0c4b35;
   cursor: pointer;
   width: 72px;
+  z-index: 1;
 }
 .language-submenu li {
   padding-top: 5px;
@@ -148,6 +149,7 @@ footer {
   height: 70px;
   padding: 15px;
   background-color: white;
+  position: relative;
 }
 
 .navbar-text {
@@ -782,18 +784,17 @@ p {
   margin-top: 30px;
 }
 
-.mob-our-staff-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: center;
-}
 .mob-our-staff-cards img {
   border-radius: 5px;
+  height: 343px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .staff-card {
   position: relative;
+  margin: 5px;
 }
 
 .staff-name {
@@ -801,7 +802,7 @@ p {
   height: 62px;
   width: 100%;
   background: linear-gradient(to top, rgb(0, 115, 12) 4.95%, rgba(0, 115, 12, 0) 264.79%);
-  bottom: 5px;
+  bottom: 0px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -818,20 +819,27 @@ p {
   font-weight: 400;
 }
 
-.staff-slides {
-  display: flex;
-  gap: 12px;
+.slick-dots {
+  bottom: -39px;
 }
-
-.st-slide {
-  width: 20px;
+.slick-dots li {
   height: 6px;
+  margin: 0 6px;
+}
+.slick-dots li button {
+  height: 6px;
+  width: 20px;
   background-color: #00730c;
+  padding: 0;
   border-radius: 8px;
 }
-
-.center-sl {
+.slick-dots li button::before {
+  display: none;
+}
+.slick-dots .slick-active {
   width: 50px;
+  background-color: #00730c;
+  border-radius: 8px;
 }
 
 .desk-our-staff-cards {
@@ -1469,13 +1477,17 @@ p {
   display: none;
 }
 
-.main-menu-close-btn {
-  background-image: url(image/main-menu-close-btn.svg);
-  background-repeat: no-repeat;
-  background-position-y: 3px;
-  height: 100%;
-  width: 30px;
-  cursor: pointer;
+.mobile-menu {
+  width: 100%;
+  top: 70px;
+  background-color: #0c4b35;
+  position: absolute;
+  transition: 0.3s all linear;
+  left: -100%;
+}
+
+.mobile-menu.active {
+  left: 0;
 }
 
 .main-menu-content {
@@ -1504,6 +1516,7 @@ p {
 }
 .mma-title:hover {
   opacity: 1;
+  cursor: pointer;
 }
 .mma-title h5 {
   color: #fff;
@@ -1518,6 +1531,13 @@ p {
   background-size: 9px;
   transition: transform 0.5s ease-out;
   transform: rotate(0);
+}
+.mma-title a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
 }
 
 .mma-title.press {
@@ -1638,15 +1658,16 @@ p {
     height: 107px;
   }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   .container {
-    max-width: 1420px;
+    max-width: 1349px;
   }
   .top-navbar-text {
-    width: 1390px;
+    width: 100%;
     height: 25px;
     font-family: "Poppins";
     font-size: 14px;
+    padding: 0px 15px;
   }
   .adress-and-phone {
     gap: 10px;
@@ -1687,6 +1708,9 @@ p {
     height: 55px;
   }
   .mobile-call-and-menu {
+    display: none;
+  }
+  .mobile-menu {
     display: none;
   }
   .desktop-menu-and-call {
@@ -1833,6 +1857,10 @@ p {
     max-width: 50%;
     min-width: 50%;
   }
+  .desktop-hero-image img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   .hero-background-flower {
     display: none;
   }
@@ -1869,6 +1897,7 @@ p {
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: top;
+    cursor: pointer;
   }
   .service-card:hover {
     background-color: #00730c;
@@ -1949,7 +1978,7 @@ p {
   .desktop-experience-image .desktop-exp-image-two {
     z-index: 1;
     top: 570px;
-    left: 237px;
+    left: 185px;
     position: absolute;
   }
   .experience-content h2 {
@@ -1987,7 +2016,7 @@ p {
   }
   .experience-button {
     margin-bottom: 30px;
-    width: 100%;
+    width: 88%;
     justify-content: start;
   }
   .experience-button button {
@@ -2042,18 +2071,25 @@ p {
   }
   .desktop-whychoose-image {
     display: flex;
+    z-index: 1;
     box-shadow: 0px 3px 15px -2px rgb(31, 29, 29);
   }
   .whychoose-fonflower-one {
-    display: none;
+    left: 957px;
+    width: 400px;
+    height: 400px;
+    background-size: contain;
   }
   .whychoose-fonflower-two {
-    display: none;
+    height: 400px;
+    background-size: contain;
+    top: 234px;
   }
   .whychoose-button button {
     width: 190px;
     height: 50px;
     font-size: 18px;
+    z-index: 1;
   }
   .working {
     padding: 0px 20px;
@@ -2075,6 +2111,7 @@ p {
     background-image: url(image/desktop-working-card-backgr.svg);
     background-position-x: 180px;
     background-position-y: 105px;
+    cursor: pointer;
   }
   .work-card-icons {
     height: 80px;
@@ -2126,7 +2163,7 @@ p {
   .ourbest-content {
     flex-direction: row;
     width: 52%;
-    gap: 85px;
+    gap: 40px;
     top: 78px;
   }
   .ourbest-content h3 {
@@ -2158,7 +2195,7 @@ p {
   }
   .our-staff-text p {
     width: 70%;
-    margin-right: 224px;
+    margin-right: 202px;
     text-align: left;
   }
   .our-staff-text button {
@@ -2185,6 +2222,10 @@ p {
     position: relative;
     height: 408px;
     display: flex;
+  }
+  .desk-st-card img {
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .desk-staff-name {
     position: absolute;
@@ -2443,6 +2484,10 @@ p {
     align-items: end;
     padding-left: 51px;
   }
+  .frequently-image img {
+    width: 407px;
+    height: 679px;
+  }
   .our-insights {
     padding: 100px 20px;
     gap: 50px;
@@ -2523,8 +2568,8 @@ p {
   }
   .desk-company-logos img {
     filter: grayscale(100%);
-    width: 202px;
-    height: 100px;
+    width: 166px;
+    height: 90px;
     cursor: pointer;
   }
   .desk-company-logos img:hover {
