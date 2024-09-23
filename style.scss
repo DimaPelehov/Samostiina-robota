@@ -7,11 +7,11 @@ body {
   font-family: "Nunito";
 }
 
-// header {
-//   position: sticky;
-//   top: 0;
-//   z-index: 50;
-// }
+header.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
 
 .container {
   max-width: 375px;
@@ -229,6 +229,11 @@ footer {
   display: flex;
   margin-top: -5px;
   height: 240px;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 .desktop-hero-image {
@@ -1679,6 +1684,8 @@ p {
   position: absolute;
   transition: 0.3s all linear;
   left: -100%;
+  // overflow: auto;
+  // height: 100vh;
 }
 
 .mobile-menu.active {
@@ -1695,7 +1702,7 @@ p {
 // }
 
 .main-menu-content {
-  padding: 25px 15px 84px;
+  padding: 25px 15px 38px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -1882,6 +1889,35 @@ p {
   }
 }
 
+// ---------------Mobile L Adaptation------------------------
+@media (min-width: 425px) {
+  .container {
+    max-width: 425px;
+  }
+
+  .top-navbar-text {
+    gap: 220px;
+  }
+
+  .mobile-experience-image {
+    .exp-green-image {
+      width: 210px;
+    }
+
+    .exp-image-one {
+      top: 20px;
+      left: 20px;
+
+      img {
+        width: 300px;
+      }
+    }
+
+    .exp-image-two {
+      left: 145px;
+    }
+  }
+}
 // ---------------Desktop Adaptation-------------------------
 
 @media (min-width: 1200px) {

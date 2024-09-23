@@ -3,9 +3,11 @@ let navbarMenuBtn = document.querySelector(".menu-button");
 // console.log(navbarMenuBtn);
 let sidebarMenu = document.querySelector(".mobile-menu");
 // console.log(sidebarMenu);
+let header = document.querySelector("header");
 
 navbarMenuBtn.addEventListener("click", function () {
   sidebarMenu.classList.toggle("active");
+  header.classList.toggle("sticky");
 });
 
 //   frequently accordion

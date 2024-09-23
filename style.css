@@ -7,6 +7,12 @@ body {
   font-family: "Nunito";
 }
 
+header.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
 .container {
   max-width: 375px;
   margin: auto;
@@ -208,6 +214,11 @@ footer {
   display: flex;
   margin-top: -5px;
   height: 240px;
+}
+.mobile-hero-image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .desktop-hero-image {
@@ -1491,7 +1502,7 @@ p {
 }
 
 .main-menu-content {
-  padding: 25px 15px 84px;
+  padding: 25px 15px 38px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -1656,6 +1667,27 @@ p {
   }
   .we-have {
     height: 107px;
+  }
+}
+@media (min-width: 425px) {
+  .container {
+    max-width: 425px;
+  }
+  .top-navbar-text {
+    gap: 220px;
+  }
+  .mobile-experience-image .exp-green-image {
+    width: 210px;
+  }
+  .mobile-experience-image .exp-image-one {
+    top: 20px;
+    left: 20px;
+  }
+  .mobile-experience-image .exp-image-one img {
+    width: 300px;
+  }
+  .mobile-experience-image .exp-image-two {
+    left: 145px;
   }
 }
 @media (min-width: 1200px) {
