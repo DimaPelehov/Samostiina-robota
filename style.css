@@ -14,7 +14,7 @@ header.sticky {
 }
 
 .container {
-  max-width: 375px;
+  max-width: 380px;
   margin: auto;
 }
 
@@ -1495,6 +1495,8 @@ p {
   position: absolute;
   transition: 0.3s all linear;
   left: -100%;
+  overflow: auto;
+  height: 100vh;
 }
 
 .mobile-menu.active {
@@ -1502,7 +1504,7 @@ p {
 }
 
 .main-menu-content {
-  padding: 25px 15px 38px;
+  padding: 25px 15px;
   display: flex;
   flex-direction: column;
   gap: 15px;
