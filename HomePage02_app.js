@@ -55,7 +55,18 @@ accordionTitles.forEach((item) =>
 // our-staff slider
 $(".mob-our-staff-cards").slick({
   dots: true,
+  slidesToShow: 2,
+  slidesToScroll: 2,
   arrows: false,
+  responsive: [
+    {
+      breakpoint: 426,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
 });
 
 // clients-say slider
@@ -65,7 +76,13 @@ $(".clients-say-cards").slick({
   arrows: true,
   responsive: [
     {
-      breakpoint: 1200,
+      breakpoint: 1025,
+      settings: {
+        arrows: false,
+      },
+    },
+    {
+      breakpoint: 768,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -88,10 +105,12 @@ let swiper = new Swiper(".our-insights-swipe", {
   },
 
   breakpoints: {
+    768: { slidesPerView: 2, spaceBetween: 30, slidesPerGroup: 2, loop: false },
     1200: {
       slidesPerView: 3,
       spaceBetween: 30,
       slidesPerGroup: 3,
+      loop: true,
     },
   },
 });
@@ -103,4 +122,11 @@ let swiper2 = new Swiper(".mob-company-logos", {
   loop: true,
   watchOverflow: true,
   spaceBetween: 30,
+
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+  },
 });

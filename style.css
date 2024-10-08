@@ -301,6 +301,9 @@ footer {
   border-radius: 25px;
   z-index: 1;
 }
+.mobile-hero-happy .mob-hero-tag:last-child {
+  display: none;
+}
 .mobile-hero-happy span {
   font-size: 12px;
   font-weight: 700;
@@ -730,6 +733,12 @@ p {
 }
 .ourbest img {
   border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.mobile-ourbest-img {
+  width: 100%;
 }
 
 .desktop-ourbest-img {
@@ -986,9 +995,11 @@ p {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  align-items: center;
 }
 .freq-text h2 {
   font-size: 28px;
+  width: 63%;
 }
 
 .freq-questions-answers {
@@ -1496,7 +1507,7 @@ p {
   transition: 0.3s all linear;
   left: -100%;
   overflow: auto;
-  height: 100vh;
+  height: 77vh;
 }
 
 .mobile-menu.active {
@@ -1691,10 +1702,135 @@ p {
   .mobile-experience-image .exp-image-two {
     left: 145px;
   }
+  .experience-content p {
+    text-align: center;
+  }
+  .whychoose-fonflower-one {
+    left: 275px;
+  }
+  .whych-tags-top {
+    gap: 35px;
+  }
+  .whych-tags-down {
+    gap: 35px;
+  }
+  .freq-text h2 {
+    width: 55%;
+  }
+  .useful-links-columns {
+    gap: 130px;
+  }
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .container {
-    max-width: 1349px;
+    max-width: 100%;
+  }
+  .top-navbar-text {
+    gap: 575px;
+  }
+  .mobile-hero-image {
+    height: 350px;
+  }
+  .hero-content-subheading {
+    font-size: 16px;
+  }
+  .hero-content-heading {
+    font-size: 45px;
+  }
+  .hch-p {
+    font-size: 45px;
+  }
+  .hero-text {
+    font-size: 18px;
+  }
+  .hero-button button {
+    width: 50%;
+  }
+  .mobile-hero-happy {
+    justify-content: center;
+  }
+  .mobile-hero-happy .mob-hero-tag {
+    padding: 12px;
+  }
+  .mobile-hero-happy .mob-hero-tag:last-child {
+    display: flex;
+  }
+  .hero-background-flower {
+    top: 820px;
+    left: 10px;
+    background-size: cover;
+    width: 90px;
+    height: 135px;
+  }
+  .service-text p {
+    font-size: 18px;
+  }
+  .service-all-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+  }
+  .service-card {
+    flex: 1 1 calc(50% - 30px);
+  }
+  .mobile-experience-image {
+    justify-content: center;
+  }
+  .mobile-experience-image .exp-image-one {
+    left: 106px;
+  }
+  .mobile-experience-image .exp-image-two {
+    left: 370px;
+    top: 293px;
+  }
+  .mob-whychoose-image img {
+    width: 500px;
+  }
+  .whychoose-text {
+    text-align: left;
+  }
+  .whych-tags-top {
+    gap: 150px;
+  }
+  .whych-tags-down {
+    gap: 150px;
+  }
+  .whychoose-fonflower-one {
+    left: 618px;
+  }
+  .working-cards {
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .work-card {
+    flex: 1 1 calc(50% - 30px);
+  }
+  .ourbest-content {
+    top: 60px;
+  }
+  .mob-our-staff-cards img {
+    height: 430px;
+  }
+  .clients-say-cards {
+    background-color: transparent;
+  }
+  .cs-card {
+    background-color: white;
+    margin: 15px;
+    box-shadow: 2px 11px 30px 0px rgba(51, 51, 51, 0.08);
+  }
+  .our-insights-card {
+    box-shadow: 125px 38px 60px -53px rgba(51, 51, 51, 0.08);
+  }
+  .useful-links-columns {
+    gap: 330px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 100%;
   }
   .top-navbar-text {
     width: 100%;
@@ -1702,6 +1838,7 @@ p {
     font-family: "Poppins";
     font-size: 14px;
     padding: 0px 15px;
+    gap: 0;
   }
   .adress-and-phone {
     gap: 10px;
@@ -1819,12 +1956,12 @@ p {
   }
   .hero {
     flex-direction: row-reverse;
-    padding-top: 46px;
+    padding: 46px 0 0;
     align-items: center;
   }
   .hero-content {
     margin: 0px;
-    padding-right: 40px;
+    padding-right: 10px;
   }
   .hero-content-subheading {
     text-transform: capitalize;
@@ -1890,10 +2027,12 @@ p {
     display: flex;
     max-width: 50%;
     min-width: 50%;
+    overflow: hidden;
   }
   .desktop-hero-image img {
     -o-object-fit: cover;
        object-fit: cover;
+    margin-left: -175px;
   }
   .hero-background-flower {
     display: none;
@@ -1921,8 +2060,8 @@ p {
     width: 100%;
   }
   .service-card {
-    flex: 1 1 calc(25% - 30px);
-    width: 25%;
+    flex: 1 1 calc(50% - 30px);
+    width: 50%;
     flex-direction: column;
     justify-content: space-between;
     gap: 50px;
@@ -1998,7 +2137,7 @@ p {
     position: relative;
   }
   .desktop-experience-image .desktop-exp-green-image {
-    width: 450px;
+    width: 380px;
     height: 706px;
     background-color: #00730c;
     position: absolute;
@@ -2009,34 +2148,47 @@ p {
     left: 24px;
     z-index: 1;
   }
+  .desktop-experience-image .desktop-exp-image-one img {
+    width: 430px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   .desktop-experience-image .desktop-exp-image-two {
     z-index: 1;
-    top: 570px;
-    left: 185px;
+    top: 670px;
+    left: 215px;
     position: absolute;
   }
+  .desktop-experience-image .desktop-exp-image-two img {
+    width: 290px;
+    height: 190px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   .experience-content h2 {
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 800;
-    text-align: left;
     margin-top: 30px;
     margin-bottom: 30px;
   }
   .experience-content p {
     font-family: "Poppins";
     font-size: 16px;
-    margin-bottom: 50px;
+    margin-bottom: 16px;
     line-height: 28px;
   }
+  .experience-content p br {
+    display: none;
+  }
   .experience-cards {
-    gap: 30px;
+    gap: 15px;
     margin-bottom: 50px;
   }
   .exp-card {
     flex-direction: row;
     box-shadow: none;
-    gap: 30px;
-    padding: 15px 5px 15px 30px;
+    gap: 10px;
+    padding: 0;
   }
   .exp-card .exp-card-image {
     width: 67px;
@@ -2051,7 +2203,7 @@ p {
   .experience-button {
     margin-bottom: 30px;
     width: 88%;
-    justify-content: start;
+    justify-content: center;
   }
   .experience-button button {
     width: 190px;
@@ -2064,10 +2216,6 @@ p {
     justify-content: space-between;
     padding: 100px 20px;
     margin: 100px 0px;
-  }
-  .whychoose-content {
-    width: 656px;
-    align-items: start;
   }
   .whychoose-text {
     text-align: left;
@@ -2085,13 +2233,13 @@ p {
     margin-bottom: 60px;
   }
   .whych-tags-top {
-    gap: 118px;
+    gap: 64px;
   }
   .whych-tags-down {
-    gap: 118px;
+    gap: 64px;
   }
   .whych-tag {
-    gap: 20px;
+    gap: 9px;
   }
   .whych-tag p {
     font-size: 24px;
@@ -2108,10 +2256,15 @@ p {
     z-index: 1;
     box-shadow: 0px 3px 15px -2px rgb(31, 29, 29);
   }
+  .desktop-whychoose-image img {
+    width: 500px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   .whychoose-fonflower-one {
-    left: 957px;
-    width: 400px;
-    height: 400px;
+    left: 730px;
+    width: 300px;
+    height: 300px;
     background-size: contain;
   }
   .whychoose-fonflower-two {
@@ -2139,7 +2292,7 @@ p {
     flex-direction: row;
   }
   .work-card {
-    flex: 1 1 calc(25% - 30px);
+    flex: 1 1 calc(50% - 30px);
     padding: 50px 29px 70px;
     gap: 35px;
     background-image: url(image/desktop-working-card-backgr.svg);
@@ -2197,11 +2350,11 @@ p {
   .ourbest-content {
     flex-direction: row;
     width: 52%;
-    gap: 40px;
-    top: 78px;
+    gap: 0px;
+    top: 56px;
   }
   .ourbest-content h3 {
-    width: 448px;
+    width: 337px;
     font-size: 33px;
     text-align: left;
   }
@@ -2228,7 +2381,7 @@ p {
     margin-bottom: 30px;
   }
   .our-staff-text p {
-    width: 70%;
+    width: 60%;
     margin-right: 202px;
     text-align: left;
   }
@@ -2247,19 +2400,22 @@ p {
   .desk-our-staff-cards {
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
   }
   .desk-our-staff-cards img {
     border-radius: 5px;
   }
   .desk-st-card {
-    flex: 1 1 calc(25% - 30px);
+    flex: 1 1 calc(50% - 30px);
     position: relative;
     height: 408px;
     display: flex;
+    overflow: hidden;
   }
   .desk-st-card img {
     -o-object-fit: cover;
        object-fit: cover;
+    margin-bottom: -170px;
   }
   .desk-staff-name {
     position: absolute;
@@ -2351,7 +2507,7 @@ p {
   .clients-say {
     padding: 100px 20px 0px 20px;
     text-align: left;
-    margin-bottom: 170px;
+    margin-bottom: 290px;
   }
   .clients-say h2 {
     font-size: 45px;
@@ -2364,9 +2520,6 @@ p {
   }
   .client-say-info p {
     width: 956px;
-  }
-  .clients-say-cards {
-    background-color: transparent;
   }
   .slick-list {
     margin: 0px -15px;
@@ -2412,12 +2565,10 @@ p {
     background-repeat: no-repeat;
   }
   .cs-card {
-    background-color: white;
     flex-direction: row;
-    height: 341px;
+    height: 100%;
     padding: 25px;
     gap: 35px;
-    margin: 15px;
     box-shadow: -1px 6px 18px 6px rgb(243, 238, 238);
   }
   .cs-card-img {
@@ -2432,19 +2583,18 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 24px;
+    padding-top: 0px;
     background-image: url(image/desk-client-say-card-icon.svg);
     background-size: 70px;
+    gap: 10px;
   }
   .cs-text p {
     line-height: 30px;
     margin-bottom: 0px;
   }
-  .cs-text-row {
-    height: 63px;
-  }
   .cs-name h4 {
     font-size: 24px;
+    margin-bottom: 10px;
   }
   .cs-name h5 {
     font-size: 14px;
@@ -2476,23 +2626,18 @@ p {
     gap: 30px;
     text-align: left;
   }
-  .freq-text br {
-    display: none;
-  }
   .freq-text h2 {
     font-size: 45px;
+    width: 100%;
   }
   .freq-questions-answers {
-    gap: 30px;
-    height: 516px;
+    gap: 20px;
+    height: 565px;
     justify-content: center;
-  }
-  .freq-accordion:last-child {
-    display: none;
   }
   .fra-title {
     padding: 13px 30px;
-    font-size: 24px;
+    font-size: 18px;
     text-transform: capitalize;
     font-weight: 700;
   }
@@ -2602,8 +2747,8 @@ p {
   }
   .desk-company-logos img {
     filter: grayscale(100%);
-    width: 166px;
-    height: 90px;
+    width: 150px;
+    height: 75px;
     cursor: pointer;
   }
   .desk-company-logos img:hover {
@@ -2699,7 +2844,7 @@ p {
     border-top: 1px solid white;
     padding: 30px 0px 40px;
     justify-content: center;
-    gap: 462px;
+    gap: 210px;
   }
   .desk-foot-final p {
     color: white;
@@ -2711,5 +2856,113 @@ p {
   .final-row a {
     font-size: 16px;
     font-weight: 400;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1349px;
+  }
+  .hero-content {
+    padding-right: 40px;
+  }
+  .service-card {
+    flex: 1 1 calc(25% - 30px);
+    width: 25%;
+  }
+  .desktop-experience-image .desktop-exp-green-image {
+    width: 450px;
+  }
+  .desktop-experience-image .desktop-exp-image-one img {
+    width: 550px;
+  }
+  .desktop-experience-image .desktop-exp-image-two {
+    top: 570px;
+    left: 200px;
+  }
+  .desktop-experience-image .desktop-exp-image-two img {
+    width: 450px;
+    height: 300px;
+  }
+  .experience-content h2 {
+    text-align: left;
+    font-size: 45px;
+  }
+  .experience-content p {
+    margin-bottom: 50px;
+  }
+  .experience-content p br {
+    display: flex;
+  }
+  .experience-cards {
+    gap: 30px;
+  }
+  .exp-card {
+    gap: 30px;
+    padding: 15px 5px 15px 30px;
+  }
+  .experience-button {
+    justify-content: start;
+  }
+  .desktop-whychoose-image img {
+    width: 672px;
+  }
+  .whychoose-content {
+    align-items: start;
+  }
+  .whychoose-fonflower-one {
+    left: 957px;
+    width: 400px;
+    height: 400px;
+  }
+  .whych-tags-top {
+    gap: 118px;
+  }
+  .whych-tags-down {
+    gap: 118px;
+  }
+  .whych-tag {
+    gap: 20px;
+  }
+  .work-card {
+    flex: 1 1 calc(25% - 30px);
+  }
+  .ourbest-content {
+    gap: 40px;
+    top: 78px;
+  }
+  .ourbest-content h3 {
+    width: 448px;
+  }
+  .our-staff-text p {
+    width: 70%;
+  }
+  .desk-st-card {
+    flex: 1 1 calc(25% - 30px);
+  }
+  .desk-st-card img {
+    margin-bottom: 0;
+  }
+  .clients-say {
+    margin-bottom: 170px;
+  }
+  .cs-card {
+    height: 341px;
+  }
+  .cs-text {
+    padding-top: 24px;
+  }
+  .fra-title {
+    font-size: 24px;
+  }
+  .freq-questions-answers {
+    gap: 30px;
+    height: 525px;
+  }
+  .desk-company-logos img {
+    width: 166px;
+    height: 90px;
+  }
+  .desk-foot-final {
+    gap: 462px;
   }
 }/*# sourceMappingURL=style.css.map */
