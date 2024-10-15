@@ -39,8 +39,20 @@ header {
   font-size: 17px;
 }
 
+.H4 {
+  font-size: 18px;
+}
+
+.H5 {
+  font-size: 15px;
+}
+
 .H6 {
   font-size: 14px;
+}
+
+.body-small {
+  font-size: 10px;
 }
 
 p {
@@ -59,11 +71,16 @@ button {
   background-color: #00730c;
   color: white;
   border-radius: 5px;
+  border: 1px solid #00730c;
 }
 .green-button:hover {
   background-color: #fff8f1;
   color: #00730c;
-  border: 1px solid #00730c;
+}
+
+.active-btn {
+  background-color: #fff8f1;
+  color: #00730c;
 }
 
 .top-navbar {
@@ -438,7 +455,189 @@ button {
 }
 
 .cta {
-  padding: 50px 15px;
+  padding: 50px 15px 0;
+  background-image: url(image/HP1-cta-bg-img.svg);
+  background-size: 312px;
+  background-position-y: 31px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  align-items: end;
+}
+.cta img {
+  padding-left: 15px;
+  width: 109px;
+  height: 148px;
+}
+
+.cta-emblems {
+  height: 50px;
+  margin-bottom: 7px;
+}
+
+.cta-emblems-card {
+  display: flex;
+  justify-content: center;
+}
+.cta-emblems-card img {
+  width: 70px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 0;
+  height: 100%;
+}
+
+.latest-project {
+  margin: 50px 0 100px;
+}
+
+.latest-proj-text {
+  text-align: center;
+  margin: 0 15px 30px;
+}
+.latest-proj-text p {
+  line-height: 22px;
+}
+.latest-proj-text p:first-child {
+  color: black;
+  margin-bottom: 10px;
+}
+.latest-proj-text h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.latest-proj-content {
+  margin-left: 15px;
+  margin-bottom: 40px;
+}
+
+.latest-proj-buttons {
+  margin-bottom: 30px;
+}
+.latest-proj-buttons button {
+  padding: 6px 20px;
+  white-space: nowrap;
+  margin-right: 15px;
+}
+
+.latest-proj-cards .slick-track {
+  display: flex;
+}
+.latest-proj-cards .slick-slide {
+  display: flex;
+}
+.latest-proj-cards .slick-dots {
+  bottom: -40px;
+}
+.latest-proj-cards .slick-dots li {
+  margin: 0 10px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.latest-proj-cards .slick-dots li button {
+  background-color: #00730c;
+  width: inherit;
+  height: inherit;
+  padding: 0;
+}
+.latest-proj-cards .slick-dots li button::before {
+  display: none;
+}
+.latest-proj-cards .slick-dots .slick-active {
+  box-shadow: 0px 0px 11px 3px rgb(0, 115, 12);
+}
+
+.latest-proj-card {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  text-align: left;
+  width: 202px;
+  background: linear-gradient(17deg, rgb(255, 255, 255) -59%, rgb(234, 234, 234) 185%);
+  border-radius: 5px;
+  box-shadow: -10px 3px 30px -14px rgba(51, 51, 51, 0.1);
+}
+.latest-proj-card img {
+  width: 100%;
+  height: 130px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+
+.latest-proj-card-text {
+  padding: 33px 13px 22px;
+}
+.latest-proj-card-text h4 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.fon-why-choose {
+  background-color: rgb(217, 241, 224);
+}
+
+.why-choose {
+  padding: 40px 15px;
+}
+
+.why-choose-text {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.why-choose-text p {
+  color: black;
+  margin-bottom: 10px;
+}
+.why-choose-text h2 {
+  font-weight: bold;
+}
+
+.why-choose-cards {
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.why-choose-card {
+  padding: 16px 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  flex: 1 1 calc(50% - 20px);
+  align-items: center;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.wc-card-img {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+}
+
+.wc-img-one {
+  background-image: url(image/HP1-why-choose-img1.svg);
+}
+
+.wc-img-two {
+  background-image: url(image/HP1-why-choose-img2.svg);
+}
+
+.wc-img-three {
+  background-image: url(image/HP1-why-choose-img3.svg);
+}
+
+.wc-img-fourth {
+  background-image: url(image/HP1-why-choose-img4.svg);
+}
+
+.wc-card-text {
+  text-align: center;
+}
+.wc-card-text h5 {
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 @media (min-width: 375px) {
@@ -448,8 +647,8 @@ button {
   .H3 {
     font-size: 20px;
   }
-  .H6 {
-    font-size: 18px;
+  .H5 {
+    font-size: 16px;
   }
   .top-nav-menu {
     gap: 40px;

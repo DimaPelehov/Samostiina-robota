@@ -1663,6 +1663,12 @@ p {
   .top-navbar-text {
     gap: 120px;
   }
+  .mobile-experience-image .exp-image-one img {
+    width: 100%;
+  }
+  .mobile-experience-image .exp-image-two {
+    left: 59px;
+  }
   .experience-content p {
     text-align: center;
   }

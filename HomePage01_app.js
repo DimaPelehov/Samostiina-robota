@@ -34,3 +34,90 @@ mobMenuTitles.forEach((item) =>
     }
   })
 );
+
+// cta emblems slider
+let ctaEmblemsSwiper = new Swiper(".cta-emblems", {
+  slidesPerView: 2,
+  slidesPerGroup: 2,
+  loop: true,
+  watchOverflow: true,
+  spaceBetween: 1,
+});
+
+// latest project buttons slider
+
+$(".latest-proj-buttons").slick({
+  arrows: false,
+  slidesToShow: 1,
+  centerMode: false,
+  variableWidth: true,
+  dots: false,
+});
+
+// latest project cards slider
+$(".latest-proj-cards").slick({
+  arrows: false,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  centerMode: false,
+  dots: true,
+  infinite: true,
+  variableWidth: true,
+});
+
+// latest project фільтрація
+const latestProjBtns = document.querySelector(".latest-proj-buttons");
+const latestProjBtnsItems = document.querySelectorAll(".latest-proj-btn");
+const latestProjCards = document.querySelectorAll(".latest-proj-card");
+const latestProjPagination = document.querySelectorAll(".slick-dots")[0];
+console.log(latestProjPagination);
+
+function filter() {
+  latestProjBtns.addEventListener("click", (e) => {
+    const targetId = e.target.dataset.id;
+    const target = e.target;
+
+    if (target.classList.contains("latest-proj-btn")) {
+      latestProjBtnsItems.forEach((item) => {
+        item.classList.remove("active-btn");
+      });
+      target.classList.add("active-btn");
+    }
+
+    switch (targetId) {
+      case "all":
+        // getItems("latest-proj-card");
+        latestProjCards.forEach((item) => {
+          if (item.classList.contains("latest-proj-card")) {
+            item.style.display = "flex";
+            latestProjPagination.style.display = "block";
+          } else {
+            latestProjPagination.style.display = "none";
+          }
+        });
+        break;
+      case "garden-care":
+        getItems(targetId);
+        break;
+      case "lawan-care":
+        getItems(targetId);
+        break;
+      case "landscape":
+        getItems(targetId);
+        break;
+    }
+  });
+}
+
+filter();
+
+function getItems(className) {
+  latestProjCards.forEach((item) => {
+    if (item.classList.contains(className)) {
+      item.style.display = "flex";
+      latestProjPagination.style.display = "none";
+    } else {
+      item.style.display = "none";
+    }
+  });
+}

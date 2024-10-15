@@ -1870,6 +1870,17 @@ p {
   .top-navbar-text {
     gap: 120px;
   }
+  .mobile-experience-image {
+    .exp-image-one {
+      img {
+        width: 100%;
+      }
+    }
+
+    .exp-image-two {
+      left: 59px;
+    }
+  }
 
   .experience-content {
     p {

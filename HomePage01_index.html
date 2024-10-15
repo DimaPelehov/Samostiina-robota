@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HomePage01</title>
+    <!-- swiper -->
+    <link rel="stylesheet" href="./swiper/swiper-bundle.min.css" />
+    <!--  -->
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <!--  -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="HomePage01_style.css" />
@@ -186,8 +193,9 @@
           </section>
         </div>
       </div>
-      <!-- services -->
+
       <div class="container">
+        <!-- services -->
         <section class="services flex">
           <div class="services-card flex items-center justify-center">
             <div class="serv-card-img flex sc-img-one"></div>
@@ -235,10 +243,191 @@
           </div>
         </section>
         <!-- cta -->
-        <section class="cta"></section>
+        <section class="cta flex">
+          <img src="image/mh-flower.svg" alt="flower" />
+          <!-- cta slider -->
+          <div class="cta-emblems swiper">
+            <div class="swiper-wrapper">
+              <div class="cta-emblems-card swiper-slide">
+                <img src="image/HP1-cta-logo1.svg" alt="logo1" />
+              </div>
+              <div class="cta-emblems-card swiper-slide">
+                <img src="image/HP1-cta-logo2.svg" alt="logo2" />
+              </div>
+              <div class="cta-emblems-card swiper-slide">
+                <img src="image/HP1-cta-logo1.svg" alt="logo1" />
+              </div>
+              <div class="cta-emblems-card swiper-slide">
+                <img src="image/HP1-cta-logo2.svg" alt="logo2" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- latest project -->
+        <section class="latest-project">
+          <div class="latest-proj-text">
+            <p class="H6">Latest Projects</p>
+            <h2 class="H1">
+              <span class="color-green">Introduce</span> Some Project
+            </h2>
+            <p class="H6">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+          </div>
+          <div class="latest-proj-content">
+            <!-- btns slider -->
+            <div class="latest-proj-buttons">
+              <button
+                class="latest-proj-btn green-button active-btn"
+                data-id="all"
+              >
+                View All
+              </button>
+              <button
+                class="latest-proj-btn green-button"
+                data-id="garden-care"
+              >
+                Garden Care
+              </button>
+              <button class="latest-proj-btn green-button" data-id="lawan-care">
+                Lawan Care
+              </button>
+              <button class="latest-proj-btn green-button" data-id="landscape">
+                Landscape
+              </button>
+            </div>
+            <!-- cards slider -->
+            <div class="latest-proj-cards">
+              <!-- 1 card -->
+              <div class="latest-proj-card garden-care">
+                <img src="image/HP1-latest-proj-img1.svg" alt="first-img" />
+                <div class="latest-proj-card-text">
+                  <h4 class="H4 color-green">Garden Care</h4>
+                  <p class="body-small">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting
+                  </p>
+                </div>
+              </div>
+              <!-- 2 card -->
+              <div class="latest-proj-card garden-care">
+                <img src="image/HP1-latest-proj-img2.svg" alt="second-img" />
+                <div class="latest-proj-card-text">
+                  <h4 class="H4 color-green">Planting</h4>
+                  <p class="body-small">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting
+                  </p>
+                </div>
+              </div>
+              <!-- 3 card -->
+              <div class="latest-proj-card lawan-care">
+                <img src="image/HP1-latest-proj-img3.svg" alt="third-img" />
+                <div class="latest-proj-card-text">
+                  <h4 class="H4 color-green">Lawan Care</h4>
+                  <p class="body-small">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting
+                  </p>
+                </div>
+              </div>
+              <!-- 4 card -->
+              <div class="latest-proj-card landscape">
+                <img src="image/HP1-latest-proj-img4.svg" alt="fourth-img" />
+                <div class="latest-proj-card-text">
+                  <h4 class="H4 color-green">Landscape</h4>
+                  <p class="body-small">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting
+                  </p>
+                </div>
+              </div>
+              <!-- 5 card -->
+              <div class="latest-proj-card lawan-care">
+                <img src="image/HP1-latest-proj-img5.svg" alt="fifth-img" />
+                <div class="latest-proj-card-text">
+                  <h4 class="H4 color-green">Lawan Care</h4>
+                  <p class="body-small">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="fon-why-choose">
+        <div class="container">
+          <!-- why choose -->
+          <section class="why-choose">
+            <div class="why-choose-text">
+              <p class="H6">Why Choose Us</p>
+              <h2 class="H1">
+                <span class="color-green">Expert</span> Trusted Us
+              </h2>
+            </div>
+            <div class="why-choose-cards flex">
+              <div class="why-choose-card flex">
+                <div class="wc-card-img wc-img-one"></div>
+                <div class="wc-card-text">
+                  <h5 class="H5">Proper Take Care</h5>
+                  <p class="body-small">
+                    Lorem ipsum dolor sit amet con sectetur adipisicing elit
+                  </p>
+                </div>
+              </div>
+              <div class="why-choose-card flex">
+                <div class="wc-card-img wc-img-two"></div>
+                <div class="wc-card-text">
+                  <h5 class="H5">Expert Farmer</h5>
+                  <p class="body-small">
+                    Lorem ipsum dolor sit amet con sectetur adipisicing elit
+                  </p>
+                </div>
+              </div>
+              <div class="why-choose-card flex">
+                <div class="wc-card-img wc-img-three"></div>
+                <div class="wc-card-text">
+                  <h5 class="H5">Home Gardening</h5>
+                  <p class="body-small">
+                    Lorem ipsum dolor sit amet con sectetur adipisicing elit
+                  </p>
+                </div>
+              </div>
+              <div class="why-choose-card flex">
+                <div class="wc-card-img wc-img-fourth"></div>
+                <div class="wc-card-text">
+                  <h5 class="H5">Clean Working</h5>
+                  <p class="body-small">
+                    Lorem ipsum dolor sit amet con sectetur adipisicing elit
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     </main>
     <footer></footer>
+    <!-- slick -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <!--https: додаємо самі, спочатку його не було  -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <!--  -->
+    <!-- swiper js -->
+    <script src="./swiper/swiper-bundle.min.js"></script>
+    <!--  -->
     <script src="HomePage01_app.js"></script>
   </body>
 </html>
