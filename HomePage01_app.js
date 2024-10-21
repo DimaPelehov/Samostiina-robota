@@ -70,7 +70,6 @@ const latestProjBtns = document.querySelector(".latest-proj-buttons");
 const latestProjBtnsItems = document.querySelectorAll(".latest-proj-btn");
 const latestProjCards = document.querySelectorAll(".latest-proj-card");
 const latestProjPagination = document.querySelectorAll(".slick-dots")[0];
-console.log(latestProjPagination);
 
 function filter() {
   latestProjBtns.addEventListener("click", (e) => {
@@ -121,3 +120,40 @@ function getItems(className) {
     }
   });
 }
+
+// -- clients say raiting --
+
+let clientsSayRaitings = document.querySelectorAll(".cs-card-stars");
+
+clientsSayRaitings.forEach(function (rating) {
+  let clientsSayRaitingItems = rating.querySelectorAll(".cs-card-star");
+
+  rating.addEventListener("click", function (e) {
+    rating.classList.remove("unselected");
+    let target = e.target;
+    if (target.classList.contains("cs-card-star")) {
+      removeClass(clientsSayRaitingItems, "active");
+      target.classList.add("active");
+    }
+  });
+});
+
+function removeClass(elements, className) {
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].classList.remove(className);
+  }
+}
+
+// clients say slider
+let clientsSaySlider = new Swiper(".clients-say-cards", {
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  loop: true,
+  watchOverflow: false,
+  spaceBetween: 20,
+
+  pagination: {
+    el: ".client-say-pagination ",
+    clickable: true,
+  },
+});
