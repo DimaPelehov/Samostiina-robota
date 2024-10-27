@@ -61,7 +61,7 @@ $(".latest-proj-cards").slick({
   slidesToScroll: 1,
   centerMode: false,
   dots: true,
-  infinite: true,
+  infinite: false,
   variableWidth: true,
 });
 
@@ -157,3 +157,99 @@ let clientsSaySlider = new Swiper(".clients-say-cards", {
     clickable: true,
   },
 });
+
+// відправка email
+const footerForm = document.getElementById("footer-form");
+const body = document.querySelector("body");
+
+footerForm.addEventListener("submit", formSend);
+
+async function formSend(e) {
+  e.preventDefault();
+
+  // перевірка заповненості усіх полів
+  let error = formValidate(footerForm);
+
+  // отримуємо дані з полей
+  let footerFormData = new FormData(footerForm);
+
+  if (error === 0) {
+    // якщо помилок немає
+    body.classList.add("sending-form", "stop-scroll");
+
+    // відправляємо запрос на сервер
+    let response = await fetch(
+      "https://my-json-server.typicode.com/kznkv-skillup/server/orders",
+      {
+        method: "POST",
+        body: footerFormData,
+      }
+    );
+
+    if (response.ok) {
+      // якщо з відповіддю з сервера все ок
+      let result = await response.json();
+      // отримуємо відповідь у json
+      alert("Надіслано");
+      // і виводимо на екран
+      footerForm.reset();
+      // очищаємо форму після відправки
+      body.classList.remove("sending-form", "stop-scroll");
+    } else {
+      // якщо с сервером проблема, то
+      alert("Помилка при відправці");
+      body.classList.remove("sending-form", "stop-scroll");
+    }
+  } else {
+    // якщо є помилки з валідацією, то
+    alert("Заповніть обов'язкове поле");
+  }
+}
+
+function formValidate(footerForm) {
+  let error = 0;
+
+  let formRequired = document.querySelectorAll(".required");
+  // визначили поля обов'язкові до заповнення
+
+  for (let i = 0; i < formRequired.length; i++) {
+    const input = formRequired[i];
+    // пройшлись по всім обов'яковим полям циклом, і кожен отриманий елемент помістили у змінну input
+    formRemoveError(input);
+    // у кожного обов'язкового поля видаляємо клас "error"
+
+    if (input.classList.contains("input-email")) {
+      if (emailTest(input)) {
+        // якщо пошту введено неправильно
+        formAddError(input);
+        // додаємо елементу "error"
+        error++;
+      } else {
+        if (input.value === "") {
+          // якщо поле незаповнено
+          formAddError(input);
+          // додаємо елементу "error"
+          error++;
+        }
+      }
+    }
+  }
+
+  return error;
+  // значення буде або 0 або ні
+}
+
+function formAddError(input) {
+  input.parentElement.classList.add("error");
+  input.classList.add("error");
+}
+
+function formRemoveError(input) {
+  input.parentElement.classList.remove("error");
+  input.classList.remove("error");
+}
+
+// перевірка правильного формату пошти
+function emailTest(input) {
+  return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+}
