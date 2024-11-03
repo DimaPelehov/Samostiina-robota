@@ -42,26 +42,40 @@ let ctaEmblemsSwiper = new Swiper(".cta-emblems", {
   loop: true,
   watchOverflow: true,
   spaceBetween: 1,
+
+  breakpoints: {
+    768: { slidesPerView: 3, slidesPerGroup: 1 },
+  },
 });
 
 // latest project buttons slider
 
 $(".latest-proj-buttons").slick({
+  infinite: false,
   arrows: false,
-  slidesToShow: 1,
-  centerMode: false,
-  variableWidth: true,
+  slidesToShow: 4,
   dots: false,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        centerMode: false,
+        variableWidth: true,
+        infinite: true,
+      },
+    },
+  ],
 });
 
 // latest project cards slider
-$(".latest-proj-cards").slick({
+$(".mob-latest-proj-cards").slick({
   arrows: false,
   slidesToShow: 1,
   slidesToScroll: 1,
   centerMode: false,
   dots: true,
-  infinite: false,
+  infinite: true,
   variableWidth: true,
 });
 
@@ -120,6 +134,15 @@ function getItems(className) {
     }
   });
 }
+
+// зміна виду desktop latest project card
+let desktopLaterProjCards = document.querySelectorAll(".desk-latest-proj-card");
+
+desktopLaterProjCards.forEach((item) =>
+  item.addEventListener("click", function () {
+    item.classList.toggle("active");
+  })
+);
 
 // -- clients say raiting --
 
