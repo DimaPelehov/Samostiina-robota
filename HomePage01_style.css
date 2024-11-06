@@ -95,12 +95,12 @@ button {
   border: 1px solid #00730c;
 }
 .green-button:hover {
-  background-color: #fff8f1;
+  background-color: white;
   color: #00730c;
 }
 
 .active-btn {
-  background-color: #fff8f1;
+  background-color: white;
   color: #00730c;
 }
 
@@ -731,6 +731,10 @@ header {
   font-weight: lighter;
 }
 
+.desk-our-team-cards {
+  display: none;
+}
+
 .fon-our-best {
   background-color: rgba(175, 187, 178, 0.3);
   background-image: url(image/fon-with-dots.svg);
@@ -739,16 +743,19 @@ header {
 .our-best {
   padding: 40px 54px;
   position: relative;
-  text-align: center;
+}
+
+.our-best-content {
   flex-direction: column;
+  text-align: center;
   align-items: center;
 }
-.our-best h3 {
+.our-best-content h3 {
   font-weight: bold;
   line-height: 27px;
   margin-bottom: 30px;
 }
-.our-best button {
+.our-best-content button {
   background-color: #fff;
   color: #00730c;
   padding: 10px 30px;
@@ -756,7 +763,7 @@ header {
   gap: 10px;
   align-items: center;
 }
-.our-best p {
+.our-best-content p {
   color: #00730c;
   font-weight: bolder;
 }
@@ -767,6 +774,10 @@ header {
   background-image: url(image/telephone-icon.svg);
 }
 
+.our-best-image {
+  display: none;
+}
+
 .our-best-bg-flower {
   position: absolute;
   left: 0;
@@ -775,6 +786,10 @@ header {
   width: 90px;
   background-image: url(image/HP1-bg-flower1.svg);
   background-repeat: no-repeat;
+}
+
+.our-best-bg-flower-two {
+  display: none;
 }
 
 .clients-say {
@@ -894,6 +909,10 @@ header {
   line-height: 22px;
 }
 
+.cs-card-bg-flower {
+  display: none;
+}
+
 .ask {
   padding: 0 15px;
   margin-bottom: 50px;
@@ -956,6 +975,10 @@ header {
   background-size: contain;
 }
 
+.second-ask-card {
+  display: none;
+}
+
 footer {
   background-image: url(image/HP1-footer-bg.svg);
   background-repeat: no-repeat;
@@ -995,35 +1018,31 @@ footer {
   height: inherit;
   width: 100%;
 }
-
-.facebook-icon {
+.about-icons .facebook-icon {
   background-image: url(image/icon-facebook-green.svg);
 }
-.facebook-icon:hover {
+.about-icons .facebook-icon:hover {
   background-image: url(image/icon-facebook-white.svg);
 }
-
-.linkedin-icon {
+.about-icons .linkedin-icon {
   background-image: url(image/icon-linkedin-green.svg);
   background-size: 16px;
 }
-.linkedin-icon:hover {
+.about-icons .linkedin-icon:hover {
   background-image: url(image/icon-linkedin-white.svg);
 }
-
-.google-icon {
+.about-icons .google-icon {
   background-image: url(image/icon-google-green.svg);
   background-size: 20px;
 }
-.google-icon:hover {
+.about-icons .google-icon:hover {
   background-image: url(image/icon-google-white.svg);
 }
-
-.twitter-icon {
+.about-icons .twitter-icon {
   background-image: url(image/icon-twitter-green.svg);
   background-size: 20px;
 }
-.twitter-icon:hover {
+.about-icons .twitter-icon:hover {
   background-image: url(image/icon-twitter-white.svg);
 }
 
@@ -1226,6 +1245,9 @@ footer {
   .H4 {
     font-size: 24px;
   }
+  .H3 {
+    font-size: 28px;
+  }
   .H1 {
     font-size: 32px;
   }
@@ -1316,6 +1338,9 @@ footer {
   .services-card:last-child {
     box-shadow: 1px 20px 10px rgba(144, 172, 149, 0.08);
   }
+  .services-card p {
+    font-size: 20px;
+  }
   .about-us {
     flex-direction: row;
     gap: 30px;
@@ -1383,12 +1408,17 @@ footer {
     gap: 30px;
   }
   .desk-latest-proj-card {
-    flex: 1 1 calc(50% - 30px);
+    width: calc(52% - 30px);
     background: linear-gradient(17deg, rgb(255, 255, 255) -59%, rgb(234, 234, 234) 185%);
     position: relative;
     border-radius: 10px;
     box-shadow: 4px 48px 96px 0px rgba(51, 51, 51, 0.1);
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+  }
+  .desk-latest-proj-card:hover .desk-latest-proj-full-info {
+    display: flex;
   }
   .desk-latest-proj-card img {
     width: 100%;
@@ -1477,7 +1507,347 @@ footer {
   .desk-latest-full-info-arrow a {
     width: 100%;
   }
-  .test:focus {
+  .why-choose-card {
+    flex: 1 1 calc(25% - 20px);
+    padding: 40px 15px;
+  }
+  .wc-card-img {
+    width: 70px;
+    height: 70px;
+  }
+  .wc-card-text h5 {
+    margin-bottom: 15px;
+  }
+  .wc-card-text p {
+    line-height: 25px;
+  }
+  .our-team {
+    padding: 50px 15px;
+  }
+  .our-team-cards {
+    display: none;
+  }
+  .desk-our-team-cards {
+    display: flex;
+  }
+  .desk-our-team-cards .slick-dots {
+    bottom: -28px;
+  }
+  .desk-our-team-cards .slick-dots li {
+    margin: 0 10px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .desk-our-team-cards .slick-dots li button {
+    background-color: #00730c;
+    width: inherit;
+    height: inherit;
+    padding: 0;
+  }
+  .desk-our-team-cards .slick-dots li button::before {
+    display: none;
+  }
+  .desk-our-team-cards .slick-dots .slick-active {
+    box-shadow: 0px 0px 11px 3px rgb(0, 115, 12);
+  }
+  .ot-card {
+    display: block;
+    margin: 0 15px 80px;
+    cursor: pointer;
+  }
+  .ot-card.active .ot-card-blur,
+  .ot-card:hover .ot-card-blur {
+    display: flex;
+  }
+  .ot-card.active .ot-card-content,
+  .ot-card:hover .ot-card-content {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -47px;
+    z-index: 5;
+    -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+    background-color: inherit;
+    color: white;
+  }
+  .ot-card.active .ot-card-content-icons,
+  .ot-card:hover .ot-card-content-icons {
+    display: flex;
+    gap: 20px;
+  }
+  .ot-card-img {
+    height: 310px;
+  }
+  .ot-card-content {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -47px;
+    width: 90%;
+    padding: 26px 40px;
+  }
+  .ot-card-content-icons {
+    display: none;
+    margin-top: 10px;
+  }
+  .ot-card-content-icons span {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    border-radius: 50%;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid green;
+  }
+  .ot-card-content-icons a {
+    width: 100%;
+  }
+  .ot-card-content-icons .facebook-icon {
+    background-image: url(image/icon-facebook-green.svg);
+  }
+  .ot-card-content-icons .linkedin-icon {
+    background-image: url(image/icon-linkedin-green.svg);
+    background-size: 16px;
+  }
+  .ot-card-content-icons .google-icon {
+    background-image: url(image/icon-google-green.svg);
+    background-size: 20px;
+  }
+  .ot-card-content-icons .twitter-icon {
+    background-image: url(image/icon-twitter-green.svg);
+    background-size: 20px;
+  }
+  .ot-card-blur {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    border-radius: 10px;
+    display: none;
+  }
+  .fon-our-best {
+    background-image: url(image/HP1-footer-bg.svg);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .our-best {
+    padding: 100px 15px 40px;
+    height: 350px;
+    overflow: hidden;
+  }
+  .our-best-image {
+    display: flex;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+  }
+  .our-best-image img {
+    max-width: 203%;
+    margin-left: -90px;
+  }
+  .our-best-content {
+    width: 50%;
+    align-items: start;
+    text-align: left;
+  }
+  .our-best-content h3 {
+    line-height: 40px;
+    margin-bottom: 60px;
+  }
+  .our-best-content button {
+    background-color: #00730c;
+    color: white;
+    padding: 10px 35px;
+  }
+  .our-best-content p {
+    color: #ffffff;
+  }
+  .telephone-icon {
+    background-image: url(image/telephone-icon-white.svg);
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+  }
+  .our-best-bg-flower {
+    bottom: 67%;
+    background-size: 114%;
+    height: 116px;
+  }
+  .our-best-bg-flower-two {
+    display: flex;
+    position: absolute;
+    background-image: url(image/HP1-our-best-bg-flower2.svg);
+    height: 120px;
+    width: 70px;
+    background-size: 70px;
+    background-repeat: no-repeat;
+    bottom: 10%;
+    left: 28%;
+  }
+  .clients-say-cards .swiper-pagination {
+    bottom: -5px;
+  }
+  .clients-say-cards .swiper-pagination-bullet {
+    width: 33px;
+    height: 13px;
+    background-color: white;
+    border: 1px solid green;
+    opacity: 1;
+    border-radius: 5px;
+  }
+  .clients-say-cards .swiper-pagination-bullet-active {
+    box-shadow: none;
+    width: 50px;
+    background-color: #00730c;
+  }
+  .cs-card.active,
+  .cs-card:hover {
+    background-color: #00730c;
+    color: white;
+    position: relative;
+  }
+  .cs-card.active p,
+  .cs-card:hover p {
+    color: white;
+  }
+  .cs-card.active span,
+  .cs-card:hover span {
+    color: white;
+  }
+  .cs-card.active .cs-card-star,
+  .cs-card:hover .cs-card-star {
+    background-image: url(image/yellow-star.svg);
+  }
+  .cs-card.active .cs-card-star.active ~ .cs-card-star,
+  .cs-card:hover .cs-card-star.active ~ .cs-card-star {
+    background-image: url(image/white-star.svg);
+  }
+  .cs-card.active .cs-card-stars:hover .cs-card-star,
+  .cs-card.active .cs-card-stars.unselected:hover .cs-card-star.active,
+  .cs-card:hover .cs-card-stars:hover .cs-card-star,
+  .cs-card:hover .cs-card-stars.unselected:hover .cs-card-star.active {
+    background-image: url(image/yellow-star.svg);
+  }
+  .cs-card.active .cs-card-star:hover ~ .cs-card-star,
+  .cs-card.active .cs-card-stars.unselected .cs-card-star.active,
+  .cs-card:hover .cs-card-star:hover ~ .cs-card-star,
+  .cs-card:hover .cs-card-stars.unselected .cs-card-star.active {
+    background-image: url(image/white-star.svg);
+  }
+  .cs-card.active .cs-card-bg-flower,
+  .cs-card:hover .cs-card-bg-flower {
+    display: flex;
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    background-image: url(image/HP1-clients-say-card-bg-flower.svg);
+    bottom: -55px;
+    background-position-y: center;
+    background-position-x: -100px;
+    background-size: cover;
+  }
+  .cs-card-star {
+    width: 25px;
+    height: 25px;
+    background-position-y: 2px;
+  }
+  .cs-card-author-raiting p {
+    font-size: 14px;
+    margin-bottom: 21px;
+  }
+  .cs-card-body {
+    background-size: 53px;
+    padding-top: 50px;
+  }
+  .cs-card-body p {
+    line-height: 30px;
+  }
+  .ask {
+    gap: 30px;
+    box-shadow: none;
+  }
+  .ask-card {
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .ask-card-img {
+    position: relative;
+  }
+  .ask-card-blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    border-radius: 5px;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    display: none;
+  }
+  .ask-content {
+    padding: 30px 30px 40px;
+  }
+  .ask-button-date {
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .ask-button-date span {
+    background-color: #fff;
     color: #00730c;
+    border: 1px solid green;
+    box-shadow: none;
+    padding: 3px 40px;
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .ask-button-date p {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .ask-content-text h5 {
+    line-height: 32px;
+    color: black;
+    margin-bottom: 20px;
+  }
+  .ask-content-text p {
+    font-size: 14px;
+    line-height: 25px;
+    margin-bottom: 30px;
+  }
+  .ask-content-text a {
+    font-size: 16px;
+    width: 105px;
+  }
+  .ask-card.active,
+  .ask-card:hover {
+    box-shadow: 2px 11px 30px 0 rgba(51, 51, 51, 0.08);
+  }
+  .ask-card.active .ask-button-date span,
+  .ask-card:hover .ask-button-date span {
+    background-color: #00730c;
+    color: white;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+  }
+  .ask-card.active .ask-content-text h5,
+  .ask-card:hover .ask-content-text h5 {
+    color: #00730c;
+  }
+  .ask-card.active .ask-card-blur,
+  .ask-card:hover .ask-card-blur {
+    display: flex;
+  }
+  .second-ask-card {
+    display: flex;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=HomePage01_style.css.map */

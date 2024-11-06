@@ -79,11 +79,12 @@ $(".mob-latest-proj-cards").slick({
   variableWidth: true,
 });
 
-// latest project фільтрація
+// latest project  фільтрація
 const latestProjBtns = document.querySelector(".latest-proj-buttons");
 const latestProjBtnsItems = document.querySelectorAll(".latest-proj-btn");
 const latestProjCards = document.querySelectorAll(".latest-proj-card");
 const latestProjPagination = document.querySelectorAll(".slick-dots")[0];
+let desktopLaterProjCards = document.querySelectorAll(".desk-latest-proj-card");
 
 function filter() {
   latestProjBtns.addEventListener("click", (e) => {
@@ -107,7 +108,12 @@ function filter() {
           } else {
             latestProjPagination.style.display = "none";
           }
-        });
+        }) ||
+          desktopLaterProjCards.forEach((deskItem) => {
+            if (deskItem.classList.contains("desk-latest-proj-card")) {
+              deskItem.style.display = "flex";
+            }
+          });
         break;
       case "garden-care":
         getItems(targetId);
@@ -132,15 +138,42 @@ function getItems(className) {
     } else {
       item.style.display = "none";
     }
-  });
+  }) ||
+    desktopLaterProjCards.forEach((deskItem) => {
+      if (deskItem.classList.contains(className)) {
+        deskItem.style.display = "flex";
+      } else {
+        deskItem.style.display = "none";
+      }
+    });
 }
 
 // зміна виду desktop latest project card
-let desktopLaterProjCards = document.querySelectorAll(".desk-latest-proj-card");
 
 desktopLaterProjCards.forEach((item) =>
   item.addEventListener("click", function () {
-    item.classList.toggle("active");
+    desktopLaterProjCards.forEach((el) => el.classList.remove("active"));
+    item.classList.add("active");
+  })
+);
+
+// desktop our team slider
+$(".desk-our-team-cards").slick({
+  slidesToShow: 2,
+  slidesToScroll: 2,
+  infinite: true,
+  arrows: false,
+  dots: true,
+});
+
+// зміна вигляду desktop our team card
+
+let deskOurTeamCard = document.querySelectorAll(".ot-card");
+
+deskOurTeamCard.forEach((item) =>
+  item.addEventListener("click", function () {
+    deskOurTeamCard.forEach((el) => el.classList.remove("active"));
+    item.classList.add("active");
   })
 );
 
@@ -179,7 +212,30 @@ let clientsSaySlider = new Swiper(".clients-say-cards", {
     el: ".client-say-pagination ",
     clickable: true,
   },
+  breakpoints: {
+    768: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 30, loop: false },
+  },
 });
+
+// зміна вигляду clients say card
+let clientsSayCard = document.querySelectorAll(".cs-card");
+
+clientsSayCard.forEach((item) =>
+  item.addEventListener("click", function () {
+    clientsSayCard.forEach((el) => el.classList.remove("active"));
+    item.classList.add("active");
+  })
+);
+
+// зміна вигляду ask card
+let askCards = document.querySelectorAll(".ask-card");
+
+askCards.forEach((item) =>
+  item.addEventListener("click", function () {
+    askCards.forEach((el) => el.classList.remove("active"));
+    item.classList.add("active");
+  })
+);
 
 // відправка email
 const footerForm = document.getElementById("footer-form");
