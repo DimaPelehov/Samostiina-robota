@@ -45,6 +45,7 @@ let ctaEmblemsSwiper = new Swiper(".cta-emblems", {
 
   breakpoints: {
     768: { slidesPerView: 3, slidesPerGroup: 1 },
+    1024: { slidesPerView: 5, loop: false, spaceBetween: 5 },
   },
 });
 
@@ -159,11 +160,22 @@ desktopLaterProjCards.forEach((item) =>
 
 // desktop our team slider
 $(".desk-our-team-cards").slick({
-  slidesToShow: 2,
-  slidesToScroll: 2,
+  slidesToShow: 3,
+  slidesToScroll: 3,
   infinite: true,
-  arrows: false,
-  dots: true,
+  arrows: true,
+  dots: false,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        arrows: false,
+        dots: true,
+      },
+    },
+  ],
 });
 
 // зміна вигляду desktop our team card
@@ -213,7 +225,7 @@ let clientsSaySlider = new Swiper(".clients-say-cards", {
     clickable: true,
   },
   breakpoints: {
-    768: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 30, loop: false },
+    768: { slidesPerView: 2, slidesPerGroup: 1, spaceBetween: 30, loop: false },
   },
 });
 

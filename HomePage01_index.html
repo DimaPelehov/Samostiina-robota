@@ -26,7 +26,7 @@
       <div class="fon-orange">
         <div class="container">
           <!-- top-navbar -->
-          <div class="top-navbar flex">
+          <div class="top-navbar">
             <div class="logo">
               <a href=""><img src="image/1 LOGO.svg" alt="" /></a>
             </div>
@@ -157,6 +157,25 @@
     <main>
       <div class="fon-orange">
         <div class="container">
+          <!-- desktop top navbar -->
+          <div class="desk-top-navbar">
+            <div class="logo">
+              <a href=""><img src="image/1 LOGO.svg" alt="" /></a>
+            </div>
+            <div class="desk-top-nav-menu-call flex">
+              <nav class="flex items-center">
+                <ul class="desk-top-nav-menu">
+                  <li><a href="index.html">Home 2</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Service</a></li>
+                  <li><a href="#">Page</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Contacts</a></li>
+                </ul>
+              </nav>
+              <div class="tn-call-btn"><a href="tel:+01 123456789"></a></div>
+            </div>
+          </div>
           <!-- hero -->
           <section class="hero">
             <div class="hero-image">
@@ -175,6 +194,7 @@
                 src="image/HP1-hero-flower.svg"
                 alt="flower"
               />
+              <div class="hero-image-lists"></div>
             </div>
             <div class="hero-content flex">
               <h2 class="D1">
@@ -188,6 +208,22 @@
               <div class="hero-content-btns flex">
                 <button class="green-button">Get A Quate</button>
                 <a href="#" class="hero-see-how">See how it work</a>
+              </div>
+              <div class="hero-content-happy">
+                <div class="hc-happy-icons flex">
+                  <span class="first-happy-icon"></span>
+                  <span class="second-happy-icon"></span>
+                  <span class="third-happy-icon"></span>
+                  <span class="fourth-happy-icon"></span>
+                </div>
+                <div class="hc-happy-text">
+                  <p class="H6">Our Happy Customer</p>
+                  <div class="hc-happy-rating">
+                    <span class="hc-happy-rating-star"></span>
+                    <span>4.8</span>
+                    <p>(12.5k Review)</p>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -259,6 +295,9 @@
               </div>
               <div class="cta-emblems-card swiper-slide">
                 <img src="image/HP1-cta-logo2.svg" alt="logo2" />
+              </div>
+              <div class="cta-emblems-card swiper-slide">
+                <img src="image/HP1-cta-logo1.svg" alt="logo1" />
               </div>
             </div>
           </div>
@@ -876,15 +915,20 @@
           <div class="clients-say-cards swiper">
             <div class="swiper-wrapper">
               <!-- 1 card -->
-              <div class="cs-card swiper-slide">
+              <div class="cs-card swiper-slide active">
                 <div class="cs-card-header flex">
                   <div class="cs-card-img csc-one"></div>
                   <div class="cs-card-author-raiting">
-                    <h5 class="H5">Amily Horper</h5>
-                    <p>Amily Horper</p>
+                    <div class="cs-card-author">
+                      <h5 class="H5">Amily Horper</h5>
+                      <p>Amily Horper</p>
+                    </div>
+
                     <div class="cs-card-raiting flex">
-                      <h5 class="H5">4.8</h5>
-                      <span class="body-small">(12.5k Review)</span>
+                      <h5 class="H5">
+                        4.8<span class="body-small">(12.5k Review)</span>
+                      </h5>
+
                       <div class="cs-card-stars unselected flex">
                         <div class="cs-card-star active"></div>
                         <div class="cs-card-star"></div>
@@ -911,11 +955,16 @@
                 <div class="cs-card-header flex">
                   <div class="cs-card-img csc-two"></div>
                   <div class="cs-card-author-raiting">
-                    <h5 class="H5">Second Horper</h5>
-                    <p>Amily Horper</p>
+                    <div class="cs-card-author">
+                      <h5 class="H5">Second Horper</h5>
+                      <p>Amily Horper</p>
+                    </div>
+
                     <div class="cs-card-raiting flex">
-                      <h5 class="H5">4.8</h5>
-                      <span class="body-small">(12.5k Review)</span>
+                      <h5 class="H5">
+                        4.8<span class="body-small">(12.5k Review)</span>
+                      </h5>
+
                       <div class="cs-card-stars unselected flex">
                         <div class="cs-card-star active"></div>
                         <div class="cs-card-star"></div>
@@ -942,11 +991,16 @@
                 <div class="cs-card-header flex">
                   <div class="cs-card-img csc-one"></div>
                   <div class="cs-card-author-raiting">
-                    <h5 class="H5">Thirty Horper</h5>
-                    <p>Amily Horper</p>
+                    <div class="cs-card-author">
+                      <h5 class="H5">Thirty Horper</h5>
+                      <p>Amily Horper</p>
+                    </div>
+
                     <div class="cs-card-raiting flex">
-                      <h5 class="H5">4.8</h5>
-                      <span class="body-small">(12.5k Review)</span>
+                      <h5 class="H5">
+                        4.8<span class="body-small">(12.5k Review)</span>
+                      </h5>
+
                       <div class="cs-card-stars unselected flex">
                         <div class="cs-card-star active"></div>
                         <div class="cs-card-star"></div>
@@ -973,11 +1027,16 @@
                 <div class="cs-card-header flex">
                   <div class="cs-card-img csc-two"></div>
                   <div class="cs-card-author-raiting">
-                    <h5 class="H5">Fourth Horper</h5>
-                    <p>Amily Horper</p>
+                    <div class="cs-card-author">
+                      <h5 class="H5">Fourth Horper</h5>
+                      <p>Amily Horper</p>
+                    </div>
+
                     <div class="cs-card-raiting flex">
-                      <h5 class="H5">4.8</h5>
-                      <span class="body-small">(12.5k Review)</span>
+                      <h5 class="H5">
+                        4.8<span class="body-small">(12.5k Review)</span>
+                      </h5>
+
                       <div class="cs-card-stars unselected flex">
                         <div class="cs-card-star active"></div>
                         <div class="cs-card-star"></div>
@@ -1004,11 +1063,16 @@
                 <div class="cs-card-header flex">
                   <div class="cs-card-img csc-one"></div>
                   <div class="cs-card-author-raiting">
-                    <h5 class="H5">Fifth Horper</h5>
-                    <p>Amily Horper</p>
+                    <div class="cs-card-author">
+                      <h5 class="H5">Fifth Horper</h5>
+                      <p>Amily Horper</p>
+                    </div>
+
                     <div class="cs-card-raiting flex">
-                      <h5 class="H5">4.8</h5>
-                      <span class="body-small">(12.5k Review)</span>
+                      <h5 class="H5">
+                        4.8<span class="body-small">(12.5k Review)</span>
+                      </h5>
+
                       <div class="cs-card-stars unselected flex">
                         <div class="cs-card-star active"></div>
                         <div class="cs-card-star"></div>
@@ -1035,54 +1099,88 @@
           </div>
         </section>
         <!-- ask -->
-        <section class="ask flex">
-          <!-- 1 card -->
-          <div class="ask-card first-ask-card">
-            <div class="ask-card-img">
-              <img src="image/HP1-ask-img1.svg" alt="hands" />
-              <div class="ask-card-blur"></div>
-            </div>
-
-            <div class="ask-content">
-              <div class="ask-button-date flex justify-between">
-                <span>Planting</span>
-                <p>Sep 6 -2021</p>
-              </div>
-              <div class="ask-content-text">
-                <h5 class="H5 color-green">
-                  Ask The Agronomists: Lawncare Tips From The Experts
-                </h5>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetuer ligula of lorem
-                  adipiscing ligula elit. Aenean commodo ligula in eget the
-                  dolor. Aenean massa. Cum sociis natoque
-                </p>
-                <a href="#">Read More <span></span></a>
-              </div>
-            </div>
+        <section class="ask">
+          <div class="ask-text">
+            <p class="H6">Blogs & News</p>
+            <h2 class="H1">
+              What's
+              <span class="color-green"> Latest Update </span>in Our Work
+            </h2>
           </div>
-          <!-- 2 card -->
-          <div class="ask-card second-ask-card">
-            <div class="ask-card-img">
-              <img src="image/HP1-latest-proj-img1.svg" alt="image" />
-              <div class="ask-card-blur"></div>
-            </div>
-
-            <div class="ask-content">
-              <div class="ask-button-date flex justify-between">
-                <span>Planting</span>
-                <p>Sep 6 -2021</p>
+          <div class="ask-cards flex">
+            <!-- 1 card -->
+            <div class="ask-card first-ask-card">
+              <div class="ask-card-img">
+                <img src="image/HP1-ask-img1.svg" alt="hands" />
+                <div class="ask-card-blur"></div>
               </div>
-              <div class="ask-content-text">
-                <h5 class="H5 color-green">
-                  Ask The Agronomists: Lawncare Tips From The Experts
-                </h5>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetuer ligula of lorem
-                  adipiscing ligula elit. Aenean commodo ligula in eget the
-                  dolor. Aenean massa. Cum sociis natoque
-                </p>
-                <a href="#">Read More <span></span></a>
+
+              <div class="ask-content">
+                <div class="ask-button-date flex justify-between">
+                  <span>Planting</span>
+                  <p>Sep 6 -2021</p>
+                </div>
+                <div class="ask-content-text">
+                  <h5 class="H5 color-green">
+                    Ask The Agronomists: Lawncare Tips From The Experts
+                  </h5>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetuer ligula of lorem
+                    adipiscing ligula elit. Aenean commodo ligula in eget the
+                    dolor. Aenean massa. Cum sociis natoque
+                  </p>
+                  <a href="#">Read More <span></span></a>
+                </div>
+              </div>
+            </div>
+            <!-- 2 card -->
+            <div class="ask-card second-ask-card active">
+              <div class="ask-card-img">
+                <img src="image/HP1-latest-proj-img1.svg" alt="image" />
+                <div class="ask-card-blur"></div>
+              </div>
+
+              <div class="ask-content">
+                <div class="ask-button-date flex justify-between">
+                  <span>Planting</span>
+                  <p>Sep 6 -2021</p>
+                </div>
+                <div class="ask-content-text">
+                  <h5 class="H5 color-green">
+                    Ask The Agronomists: Lawncare Tips From The Experts
+                  </h5>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetuer ligula of lorem
+                    adipiscing ligula elit. Aenean commodo ligula in eget the
+                    dolor. Aenean massa. Cum sociis natoque
+                  </p>
+                  <a href="#">Read More <span></span></a>
+                </div>
+              </div>
+            </div>
+            <!-- 3 card -->
+            <div class="ask-card third-ask-card active">
+              <div class="ask-card-img">
+                <img src="image/HP1-latest-proj-img3.svg" alt="image" />
+                <div class="ask-card-blur"></div>
+              </div>
+
+              <div class="ask-content">
+                <div class="ask-button-date flex justify-between">
+                  <span>Planting</span>
+                  <p>Sep 6 -2021</p>
+                </div>
+                <div class="ask-content-text">
+                  <h5 class="H5 color-green">
+                    Ask The Agronomists: Lawncare Tips From The Experts
+                  </h5>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetuer ligula of lorem
+                    adipiscing ligula elit. Aenean commodo ligula in eget the
+                    dolor. Aenean massa. Cum sociis natoque
+                  </p>
+                  <a href="#">Read More <span></span></a>
+                </div>
               </div>
             </div>
           </div>
@@ -1092,114 +1190,116 @@
     <footer>
       <div class="container">
         <section class="footer-content flex">
-          <!-- about -->
-          <div class="about">
-            <h5 class="H5">About Us</h5>
-            <p class="H6">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s,when an unknown printer took.
-            </p>
-            <div class="about-icons flex">
-              <span class="facebook-icon"
-                ><a href="https://uk-ua.facebook.com/"></a
-              ></span>
-              <span class="linkedin-icon"
-                ><a href="https://www.linkedin.com/"></a
-              ></span>
-              <span class="google-icon"
-                ><a href="https://www.google.com.ua/?hl=ru"></a
-              ></span>
-              <span class="twitter-icon"
-                ><a href="https://twitter.com/?lang=ru"></a
-              ></span>
-            </div>
-          </div>
-          <!-- contacts -->
-          <div class="contacts">
-            <h5 class="H5">Contacts</h5>
-            <div class="contacts-links flex">
-              <div class="contacts-link">
-                <a
-                  href="https://www.google.com.ua/maps/@50.3110835,34.8787031,18.75z?hl=ru&entry=ttu"
-                >
-                  <span class="location-icon"></span>
-                  <p class="H6">27 Division St, New York, NY 10002, USA</p></a
-                >
-              </div>
-              <div class="contacts-link">
-                <a href="tel:+01 123456789">
-                  <span class="phone-icon"></span>
-                  <p class="H6">+01 1123456789, +01 1123456789</p></a
-                >
-              </div>
-              <div class="contacts-link">
-                <a href="mailto:Plantingservice@7oroof.com">
-                  <span class="email-icon"></span>
-                  <p class="H6">Solarpenal@gmail.Com</p></a
-                >
+          <div class="footer-items">
+            <!-- about -->
+            <div class="about footer-item">
+              <h5 class="H5">About Us</h5>
+              <p class="H6">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s,when an unknown printer took.
+              </p>
+              <div class="about-icons flex">
+                <span class="facebook-icon"
+                  ><a href="https://uk-ua.facebook.com/"></a
+                ></span>
+                <span class="linkedin-icon"
+                  ><a href="https://www.linkedin.com/"></a
+                ></span>
+                <span class="google-icon"
+                  ><a href="https://www.google.com.ua/?hl=ru"></a
+                ></span>
+                <span class="twitter-icon"
+                  ><a href="https://twitter.com/?lang=ru"></a
+                ></span>
               </div>
             </div>
-          </div>
-          <!-- useful links-->
-          <div class="useful-links">
-            <h5 class="H5">Useful Links</h5>
-            <div class="useful-links-columns">
-              <div class="use-link-column">
-                <div class="use-link-item">
-                  <div class="us-lin-arrow"></div>
-                  <a href="index.html">Home 2</a>
+            <!-- contacts -->
+            <div class="contacts footer-item">
+              <h5 class="H5">Contacts</h5>
+              <div class="contacts-links flex">
+                <div class="contacts-link">
+                  <a
+                    href="https://www.google.com.ua/maps/@50.3110835,34.8787031,18.75z?hl=ru&entry=ttu"
+                  >
+                    <span class="location-icon"></span>
+                    <p class="H6">27 Division St, New York, NY 10002, USA</p></a
+                  >
                 </div>
-                <div class="use-link-item">
-                  <div class="us-lin-arrow"></div>
-                  <a href="">About Us</a>
+                <div class="contacts-link">
+                  <a href="tel:+01 123456789">
+                    <span class="phone-icon"></span>
+                    <p class="H6">+01 1123456789, +01 1123456789</p></a
+                  >
                 </div>
-                <div class="use-link-item">
-                  <div class="us-lin-arrow"></div>
-                  <a href="">Services</a>
-                </div>
-                <div class="use-link-item">
-                  <div class="us-lin-arrow"></div>
-                  <a href="">Project</a>
-                </div>
-              </div>
-              <div class="use-link-column">
-                <div class="use-link-item">
-                  <div class="us-lin-arrow"></div>
-                  <a href="">Blog</a>
-                </div>
-                <div class="use-link-item">
-                  <div class="us-lin-arrow"></div>
-                  <a href="">FAQ</a>
-                </div>
-                <div class="use-link-item">
-                  <div class="us-lin-arrow"></div>
-                  <a href="">Contact Us</a>
-                </div>
-                <div class="use-link-item">
-                  <div class="us-lin-arrow"></div>
-                  <a href="">Thank You</a>
+                <div class="contacts-link">
+                  <a href="mailto:Plantingservice@7oroof.com">
+                    <span class="email-icon"></span>
+                    <p class="H6">Solarpenal@gmail.Com</p></a
+                  >
                 </div>
               </div>
             </div>
-          </div>
-          <!-- newsletter -->
-          <div class="newsletter">
-            <h5 class="H5">Newsletter</h5>
-            <p class="H6">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum text of has been the industry.
-            </p>
+            <!-- useful links-->
+            <div class="useful-links footer-item">
+              <h5 class="H5">Useful Links</h5>
+              <div class="useful-links-columns">
+                <div class="use-link-column">
+                  <div class="use-link-item">
+                    <div class="us-lin-arrow"></div>
+                    <a href="index.html">Home 2</a>
+                  </div>
+                  <div class="use-link-item">
+                    <div class="us-lin-arrow"></div>
+                    <a href="">About Us</a>
+                  </div>
+                  <div class="use-link-item">
+                    <div class="us-lin-arrow"></div>
+                    <a href="">Services</a>
+                  </div>
+                  <div class="use-link-item">
+                    <div class="us-lin-arrow"></div>
+                    <a href="">Project</a>
+                  </div>
+                </div>
+                <div class="use-link-column">
+                  <div class="use-link-item">
+                    <div class="us-lin-arrow"></div>
+                    <a href="">Blog</a>
+                  </div>
+                  <div class="use-link-item">
+                    <div class="us-lin-arrow"></div>
+                    <a href="">FAQ</a>
+                  </div>
+                  <div class="use-link-item">
+                    <div class="us-lin-arrow"></div>
+                    <a href="">Contact Us</a>
+                  </div>
+                  <div class="use-link-item">
+                    <div class="us-lin-arrow"></div>
+                    <a href="">Thank You</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- newsletter -->
+            <div class="newsletter footer-item">
+              <h5 class="H5">Newsletter</h5>
+              <p class="H6">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum text of has been the industry.
+              </p>
 
-            <form action="#" id="footer-form" class="newsletter-form flex">
-              <input
-                type="email"
-                class="input-email required"
-                autocomplete="off"
-                placeholder="Email..."
-              />
-              <button class="green-button">Subscribe</button>
-            </form>
+              <form action="#" id="footer-form" class="newsletter-form flex">
+                <input
+                  type="email"
+                  class="input-email required"
+                  autocomplete="off"
+                  placeholder="Email..."
+                />
+                <button class="green-button">Subscribe</button>
+              </form>
+            </div>
           </div>
           <!-- copyright -->
           <div class="copyright flex">
