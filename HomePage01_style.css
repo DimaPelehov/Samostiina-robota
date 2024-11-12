@@ -1604,6 +1604,7 @@ footer {
   .ot-card.active .ot-card-content-icons,
   .ot-card:hover .ot-card-content-icons {
     display: flex;
+    justify-content: center;
     gap: 20px;
   }
   .ot-card-img {
@@ -2283,5 +2284,72 @@ footer {
   .third-ask-card {
     display: flex;
     flex-direction: column;
+  }
+  .useful-links-columns {
+    gap: 135px;
+  }
+  .use-link-item a {
+    font-size: 18px;
+  }
+  .newsletter-form input {
+    width: 70%;
+  }
+}
+@media (min-width: 1349px) {
+  body::after {
+    background: rgba(0, 0, 0, 0.308) url(image/loading.gif) center/90px no-repeat;
+  }
+  .container {
+    min-width: 100%;
+  }
+  .desk-top-nav-menu-call {
+    gap: 90px;
+  }
+  .hero-content {
+    width: 50%;
+  }
+  .hero-content-btns a {
+    width: 25%;
+  }
+  .cta {
+    background-size: 1710px;
+    background-position-y: 80px;
+  }
+  .cta-emblems {
+    height: 130px;
+  }
+  .cta-emblems-card img {
+    width: 140px;
+    height: 100px;
+  }
+  .desk-our-team-cards .slick-prev {
+    left: 1160px;
+  }
+  .cs-card-author-raiting {
+    gap: 170px;
+  }
+  .useful-links-columns {
+    gap: 215px;
+  }
+  .newsletter-form input {
+    width: 77%;
+  }
+}
+@media (min-width: 1440px) {
+  .cta {
+    background-size: 1830px;
+    background-position-y: 60px;
+  }
+  .cta-emblems {
+    height: 137px;
+  }
+  .desk-our-team-cards .slick-prev {
+    left: 1260px;
+  }
+  .cs-card-author-raiting {
+    gap: 220px;
+  }
+  .newsletter-form input {
+    width: 79%;
   }
 }/*# sourceMappingURL=HomePage01_style.css.map */
