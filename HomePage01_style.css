@@ -35,6 +35,7 @@ header {
 
 .container {
   margin: auto;
+  width: 100%;
   max-width: 100%;
 }
 
@@ -2018,6 +2019,7 @@ footer {
   }
   .hc-happy-icons {
     width: 175px;
+    position: relative;
   }
   .hc-happy-icons span {
     width: 60px;
@@ -2031,22 +2033,21 @@ footer {
   }
   .first-happy-icon {
     background-image: url(image/desk-staff-1.png);
-    position: relative;
   }
   .second-happy-icon {
     background-image: url(image/desk-staff-2.png);
     position: absolute;
-    left: 55px;
+    left: 38px;
   }
   .third-happy-icon {
     background-image: url(image/desk-staff-3.png);
     position: absolute;
-    left: 92px;
+    left: 77px;
   }
   .fourth-happy-icon {
     background-image: url(image/desk-staff-4.png);
     position: absolute;
-    left: 130px;
+    left: 116px;
   }
   .hc-happy-text p {
     color: black;
@@ -2336,6 +2337,10 @@ footer {
   }
 }
 @media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    min-width: 0;
+  }
   .cta {
     background-size: 1830px;
     background-position-y: 60px;

@@ -1,0 +1,398 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito";
+}
+
+.stop-scroll {
+  overflow: hidden;
+}
+
+header {
+  position: relative;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fon-top-navbar {
+  background-color: #0c4b35;
+  position: relative;
+  z-index: 30;
+}
+
+.top-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.adress-and-phone {
+  display: flex;
+  gap: 20px;
+}
+.adress-and-phone a {
+  display: flex;
+  height: 100%;
+}
+
+.adress-and-phone-icon {
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+}
+
+.mail {
+  background-image: url(../image/Mail.svg);
+}
+
+.phone {
+  background-image: url(../image/Vector.svg);
+}
+
+.location {
+  background-image: url(../image/Location.svg);
+}
+
+.email {
+  display: none;
+}
+
+.phone-number {
+  display: none;
+}
+
+.location-adress {
+  display: none;
+}
+
+.language {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.language-menu {
+  list-style: none;
+  padding: 0px;
+}
+.language-menu a {
+  color: white;
+  font-size: 12px;
+  display: flex;
+  cursor: pointer;
+}
+.language-menu li {
+  position: relative;
+}
+
+.language-submenu {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  flex-direction: column;
+  position: absolute;
+  left: -17px;
+  list-style: none;
+  padding: 10px;
+  background-color: #0c4b35;
+  z-index: 1;
+  border-radius: 5px;
+}
+.language-submenu li {
+  padding: 5px;
+}
+.language-submenu li:hover {
+  background-color: white;
+}
+.language-submenu li:hover a {
+  color: #0c4b35;
+  transition: all 0.1s ease-out;
+}
+.language-submenu a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  transition: all 0.1s ease-out;
+}
+
+.language-submenu.active {
+  display: flex;
+  gap: 7px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.arrow {
+  background-image: url(../image/Arrow.svg);
+  width: 7px;
+  height: 4px;
+}
+
+.navbar {
+  padding: 15px 0;
+  position: relative;
+  z-index: 30;
+  background-color: white;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-call-menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-call {
+  width: 40px;
+  height: 34px;
+  background-color: #00730c;
+  border-radius: 10px;
+  background-image: url(../image/telephone-icon-white.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+}
+.nav-call a {
+  display: flex;
+  height: 100%;
+}
+
+.nav-menu {
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+.nav-menu::before, .nav-menu::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #00730c;
+}
+.nav-menu::before {
+  top: 0;
+  transition: 0.3s all linear;
+}
+.nav-menu::after {
+  bottom: 0;
+  transition: 0.3s all linear;
+  width: 20px;
+}
+.nav-menu span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #00730c;
+  top: 9px;
+}
+
+.nav-menu.active::before {
+  top: 10px;
+  transform: rotate(-45deg);
+}
+.nav-menu.active::after {
+  width: 100%;
+  bottom: 8px;
+  transform: rotate(45deg);
+}
+.nav-menu.active span {
+  display: none;
+}
+
+.mob-menu {
+  background-color: #0c4b35;
+  position: absolute;
+  width: 100%;
+  left: -100%;
+  top: 0;
+  z-index: 5;
+  transition: 0.3s all linear;
+  padding: 0 15px;
+}
+
+.mob-menu.active {
+  left: 0;
+}
+
+.mob-menu-wrapper {
+  height: 100vh;
+  overflow: auto;
+  gap: 25px;
+}
+
+.mob-menu-content {
+  width: 100%;
+  gap: 15px;
+  padding-top: 163px;
+}
+
+.mob-menu-cont-item {
+  border-bottom: 1px solid grey;
+  padding-bottom: 8px;
+}
+
+.mob-menu-accordion {
+  display: flex;
+  flex-direction: column;
+  width: 143px;
+}
+
+.mma-title {
+  display: flex;
+  gap: 8px;
+  opacity: 0.7;
+  align-items: center;
+}
+.mma-title:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.mma-title h5 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+.mma-title span {
+  width: 12px;
+  height: 12px;
+  background-image: url(../image/Arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 9px;
+  transition: transform 0.5s ease-out;
+  transform: rotate(0);
+}
+.mma-title a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+}
+
+.mma-title.press {
+  opacity: 1;
+}
+.mma-title.press span {
+  transform: rotate(180deg);
+}
+
+.mma-column {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  box-sizing: content-box;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out, opacity 0.1s ease-out 0.5s, visibility 0.1s ease-out 0.5s;
+}
+
+.mma-column.press {
+  visibility: visible;
+  padding-top: 15px;
+  opacity: 1;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out, opacity 0.1s ease-out 0.1s, visibility 0.1s ease-out 0.1s;
+}
+
+.mma-column-item {
+  display: flex;
+}
+.mma-column-item a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.7;
+  display: flex;
+}
+.mma-column-item a:hover {
+  opacity: 1;
+}
+
+.mob-menu-foot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 23px;
+  padding: 0px 15px 20px;
+}
+
+.mmf-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.mmf-soc-icon {
+  width: 20px;
+  height: 20px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.mmf-soc-icon a {
+  display: block;
+  height: 20px;
+}
+
+.mmf-facebook {
+  background-image: url(../image/icon-facebook-white.svg);
+}
+
+.mmf-linkedin {
+  background-image: url(../image/icon-linkedin-white.svg);
+  background-size: 15px;
+}
+
+.mmf-google {
+  background-image: url(../image/icon-google-white.svg);
+}
+
+.mmf-twitter {
+  background-image: url(../image/icon-twitter-white.svg);
+}
+
+.mmf-final {
+  text-align: center;
+  color: white;
+  padding: 0px 10px;
+}
+.mmf-final h6 {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+@media (min-width: 1024px) {
+  .language-menu li:hover .language-submenu {
+    display: flex;
+    gap: 7px;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+}/*# sourceMappingURL=AboutUsStyle.css.map */
