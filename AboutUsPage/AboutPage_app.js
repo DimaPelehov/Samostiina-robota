@@ -44,4 +44,13 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     })
   );
+
+  // logos slider
+  let logosSwiper = new Swiper(".logos-slider", {
+    slidesPerView: 2,
+    slidesPerGroup: 2,
+    loop: true,
+    watchOverflow: true,
+    spaceBetween: 30,
+  });
 });
