@@ -4,6 +4,29 @@
 
 body {
   font-family: "Nunito";
+  position: relative;
+
+  &::after {
+    content: "";
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.308) url(../image/loading.gif) center/50px
+      no-repeat;
+    transition: all 0.5s ease-out 0s;
+  }
+}
+
+.sending-form {
+  &::after {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .stop-scroll {
@@ -17,17 +40,27 @@ header {
 $green-color: #00730c;
 $fon-green-color: #0c4b35;
 
-$D1: 32px;
-$H1: 28px;
-$H2: 22px;
-$H3: 20px;
-$H4: 18px;
-$H5: 16px;
-$H6: 14px;
-$body: 12px;
-$body-small: 10px;
+$mob_D1: 32px;
+$mob_H1: 28px;
+$mob_H2: 22px;
+$mob_H3: 20px;
+$mob_H4: 18px;
+$mob_H5: 16px;
+$mob_H6: 14px;
+$mob_body: 12px;
+$mob_body-small: 10px;
 
 $mob-p-lineHeight: 22px;
+
+$desk_D1: 78px;
+$desk_H1: 58px;
+$desk_H2: 52px;
+$desk_H3: 45px;
+$desk_H4: 33px;
+$desk_H5: 24px;
+$desk_H6: 18px;
+$desk_body: 16px;
+$desk_body-small: 14px;
 
 .container {
   padding: 0 15px;
@@ -42,6 +75,24 @@ a {
 p {
   color: rgba(103, 103, 103, 1);
   line-height: 22px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.green-btn {
+  background-color: #00730c;
+  border: 1px solid #00730c;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+
+  &:hover {
+    background-color: #fff;
+    color: #00730c;
+  }
 }
 
 // .D1 {
@@ -472,7 +523,7 @@ p {
 // hero
 .hero {
   // background-image: url(../image/about-us-hero-bg.svg);
-  padding: 146px 0 50px;
+  padding: 120px 0 50px;
   background-size: 405%;
   background-repeat: no-repeat;
   background-position: center;
@@ -481,7 +532,7 @@ p {
       rgba(30, 29, 29, 50%) 48%,
       rgba(0, 115, 12, 1) 68%
     ),
-    url(../image/about-us-hero-bg.svg);
+    url(../image/about-us-hero-bg.jpg);
 }
 
 .hero-content {
@@ -491,11 +542,11 @@ p {
   h2 {
     font-weight: bold;
     margin-bottom: 15px;
-    font-size: $D1;
+    font-size: $mob_D1;
   }
 
   p {
-    font-size: $H6;
+    font-size: $mob_H6;
     color: white;
     margin-bottom: 30px;
   }
@@ -507,7 +558,7 @@ p {
   justify-content: center;
 
   a {
-    font-size: $H4;
+    font-size: $mob_H4;
     font-weight: bold;
 
     &:first-child {
@@ -532,7 +583,7 @@ p {
 
 // about us
 .about-us {
-  padding: 50px 0;
+  padding: 50px 0 90px;
 }
 
 .about-us-header {
@@ -540,18 +591,23 @@ p {
   text-align: center;
 
   h6 {
-    font-size: $H6;
+    font-size: $mob_H6;
     margin-bottom: 15px;
   }
 
   h2 {
-    font-size: $H1;
+    font-size: $mob_H1;
     font-weight: bold;
   }
 
   span {
     color: $green-color;
   }
+}
+
+.about-us-body {
+  display: flex;
+  flex-direction: column;
 }
 
 .about-us-images {
@@ -593,13 +649,12 @@ p {
 }
 
 .about-us-content {
-  margin-bottom: 40px;
-
   h3 {
-    font-size: $H3;
+    font-size: $mob_H3;
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
+    line-height: 27px;
   }
 
   span {
@@ -612,7 +667,7 @@ p {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  margin: 40px 0 30px;
 }
 
 .au-card {
@@ -627,7 +682,7 @@ p {
   box-shadow: 0px 3px 15px 8px rgb(243, 238, 238);
 
   h6 {
-    font-size: $H6;
+    font-size: $mob_H6;
     font-weight: bold;
   }
 }
@@ -651,11 +706,11 @@ p {
   background-image: url(../image/exp-card-image4.svg);
 }
 
-.about-us-content-two {
+.about-us-mission {
   margin-bottom: 50px;
 
   h3 {
-    font-size: $H3;
+    font-size: $mob_H3;
     font-weight: bold;
     text-align: left;
     margin-bottom: 10px;
@@ -669,7 +724,7 @@ p {
 
 .our-skills-content {
   h2 {
-    font-size: $H1;
+    font-size: $mob_H1;
     font-weight: bold;
     margin-bottom: 10px;
   }
@@ -761,6 +816,13 @@ p {
   }
 }
 
+// our staff
+.our-staff {
+  display: none;
+}
+
+// logos slider
+
 .logos-slider {
   padding: 0 15px 50px;
 }
@@ -782,14 +844,22 @@ p {
 
 footer {
   background-color: $fon-green-color;
-  padding: 139px 0 40px;
+  padding: 139px 0 20px;
   position: relative;
+
+  h4 {
+    font-size: $mob_H4;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
 }
 
 .we-have {
   padding: 0 15px;
   position: absolute;
-  top: -30px;
+  top: -8%;
+  left: 0;
+  right: 0;
 }
 
 .we-have-card {
@@ -802,11 +872,459 @@ footer {
   gap: 25px;
 
   h3 {
-    font-size: $H3;
+    font-size: $mob_H3;
+    text-align: center;
+    font-weight: bold;
+    line-height: 27px;
   }
 
   span {
     color: $green-color;
+  }
+
+  button {
+    padding: 10px 30px;
+  }
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  color: white;
+  padding-bottom: 40px;
+  border-bottom: 1px solid grey;
+}
+
+// subscribe
+.subscribe {
+  color: white;
+
+  p {
+    color: white;
+    font-size: $mob_H6;
+  }
+}
+
+.subscribe-form {
+  margin: 30px 0 15px;
+  border-bottom: 1px solid white;
+  justify-content: space-between;
+
+  input {
+    background-color: inherit;
+    outline: none;
+    padding-left: 10px;
+
+    &::placeholder {
+      color: white;
+    }
+  }
+
+  button {
+    font-size: 22px;
+    font-weight: bold;
+  }
+}
+
+.input-email.error {
+  &::placeholder {
+    color: red;
+  }
+}
+
+.subscribe-icons {
+  gap: 30px;
+
+  span {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:hover {
+      background-color: white;
+    }
+  }
+
+  a {
+    width: 100%;
+  }
+
+  .facebook-icon {
+    background-image: url(../image/icon-facebook-white.svg);
+
+    &:hover {
+      background-image: url(../image/icon-facebook-green.svg);
+    }
+  }
+  .linkedin-icon {
+    background-image: url(../image/icon-linkedin-white.svg);
+    background-size: 16px;
+
+    &:hover {
+      background-image: url(../image/icon-linkedin-green.svg);
+    }
+  }
+  .google-icon {
+    background-image: url(../image/icon-google-white.svg);
+    background-size: 20px;
+
+    &:hover {
+      background-image: url(../image/icon-google-green.svg);
+    }
+  }
+  .twitter-icon {
+    background-image: url(../image/icon-twitter-white.svg);
+    background-size: 20px;
+
+    &:hover {
+      background-image: url(../image/icon-twitter-green.svg);
+    }
+  }
+}
+
+// contacts
+.contacts {
+  h6 {
+    font-size: $mob_H6;
+  }
+
+  a {
+    margin-bottom: 10px;
+    display: flex;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// useful links
+.useful-links-columns {
+  display: flex;
+  gap: 100px;
+}
+
+.use-link-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.use-link-item {
+  display: flex;
+  gap: 10px;
+
+  a {
+    font-size: 14px;
+  }
+}
+
+.us-lin-arrow {
+  width: 10px;
+  background-image: url(../image/client-say-arrow-right.svg);
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+// popular
+.popular-item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    font-size: 14px;
+  }
+}
+
+// final
+.foot-final {
+  padding: 15px 0 0;
+  text-align: center;
+
+  p {
+    color: white;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+}
+
+.final-row {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+// --------Mobile M Adaptation--------
+@media (min-width: 375px) {
+  .au-image-two {
+    left: 103px;
+  }
+}
+
+// --------Mobile M Adaptation--------
+@media (min-width: 425px) {
+  .au-image-one {
+    width: 90%;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .au-image-two {
+    left: 154px;
+  }
+}
+
+// --------Tablet Adaptation----------
+@media (min-width: 768px) {
+  .top-navbar {
+    padding: 20px 0;
+  }
+
+  .hero {
+    background-size: 140%;
+    background-image: linear-gradient(
+        310deg,
+        rgba(30, 29, 29, 0.5) 57%,
+        rgb(0, 115, 12) 122%
+      ),
+      url(../image/about-us-hero-bg.jpg);
+  }
+
+  .about-us-header {
+    h6 {
+      display: none;
+    }
+
+    span {
+      color: black;
+    }
+  }
+
+  .about-us-body {
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .about-us-content {
+    max-width: 50%;
+
+    h3 {
+      text-align: left;
+    }
+  }
+
+  .about-us-images {
+    margin: 0;
+  }
+
+  .au-image-one {
+    width: 85%;
+  }
+
+  .au-image-two {
+    left: 97px;
+  }
+
+  .our-skills {
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .our-skills-content {
+    max-width: 55%;
+  }
+
+  .our-skills-image {
+    margin: 0;
+
+    img {
+      object-fit: cover;
+      height: 80%;
+    }
+  }
+
+  .our-staff {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .our-staff-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+
+    h2 {
+      font-size: $mob_H1;
+      font-weight: bold;
+    }
+
+    span {
+      color: $green-color;
+    }
+
+    button {
+      padding: 10px 30px;
+    }
+  }
+
+  // our staff slider
+  .our-staff-cards {
+    margin: 0 -15px;
+    margin-bottom: 50px;
+  }
+
+  .st-card {
+    position: relative;
+    height: 408px;
+    overflow: hidden;
+    margin: 0 15px;
+    cursor: pointer;
+
+    img {
+      border-radius: 5px;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .staff-name {
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(
+      (to top, rgb(0, 115, 12) 4.95%, rgba(0, 115, 12, 0) 264.79%)
+    );
+    border-radius: 5px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: white;
+    padding: 13px;
+
+    h4 {
+      font-size: $mob_H4;
+      font-weight: bold;
+    }
+
+    h5 {
+      font-size: $mob_H6;
+    }
+  }
+
+  .full-info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      (to top, rgb(0, 115, 12) 4.95%, rgba(0, 115, 12, 0) 264.79%)
+    );
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    border-radius: 5px;
+  }
+
+  .full-info-content {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .fic-name {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 5px;
+    align-items: center;
+
+    h4 {
+      font-size: $mob_H4;
+      font-weight: bold;
+    }
+
+    h5 {
+      font-size: $mob_H6;
+    }
+  }
+
+  .fic-icons {
+    display: flex;
+    gap: 25px;
+  }
+
+  .fic-icon {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    a {
+      height: 30px;
+      width: 30px;
+      display: flex;
+    }
+  }
+
+  .fic-first {
+    background-image: url(../image/icon-google-white.svg);
+  }
+  .fic-second {
+    background-image: url(../image/icon-facebook-white.svg);
+  }
+  .fic-third {
+    background-image: url(../image/icon-twitter-white.svg);
+    background-size: 25px;
+  }
+  .fic-fourth {
+    background-image: url(../image/icon-pinterest-white.svg);
+  }
+  .fic-fifth {
+    background-image: url(../image/icon-linkedin-white.svg);
+    background-size: 25px;
+  }
+
+  .st-card:hover,
+  .st-card.active {
+    .full-info {
+      display: flex;
+    }
+  }
+
+  .footer-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    column-gap: 80px;
+  }
+
+  .footer-item {
+    flex: 1 1 calc(50% - 40px);
   }
 }
 
